@@ -12,7 +12,7 @@ class TableController extends Controller
     {
        /* $this->middleware('auth');*/
     }
-    
+
     public function index()
     {
         //Action bei $_POST[]
@@ -28,7 +28,7 @@ class TableController extends Controller
             "users" => $users,
             'test_text' => "ich bin ein test",
             'test_id' => "1",
-            'test_header' => "huhu",
+            'test_header' => "huhu"
         ]);
     }
 }
