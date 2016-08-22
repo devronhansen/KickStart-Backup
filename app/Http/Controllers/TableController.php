@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
+use App\News;
 
 class TableController extends Controller
 {
@@ -12,7 +13,7 @@ class TableController extends Controller
     {
        /* $this->middleware('auth');*/
     }
-    
+
     public function index()
     {
         //Action bei $_POST[]
@@ -22,13 +23,10 @@ class TableController extends Controller
 
         //If Delete...
 
-        $users = User::all();
+        $data = News::all();
 
         return view('home', [
-            "users" => $users,
-            'test_text' => "ich bin ein test",
-            'test_id' => "1",
-            'test_header' => "huhu",
+            "data" => $data,
         ]);
     }
 }
