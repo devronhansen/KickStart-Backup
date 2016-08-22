@@ -1,9 +1,11 @@
 <!-- Table News-->
-         <div class="container col-md-12">
-         </br>
-         <div class="container">
-         </div>
-           <table class="table table-striped table-hover table-bordered">
+ <div class="container col-md-12">
+     <br>
+       <div>
+           <button type="button" class="btn btn-primary col-xs-offset-10">Neuer Eintrag</button>
+       </div>
+       <br>
+         <table class="table table-striped table-hover table-bordered">
              <thead>
                <tr>
                  <th class="col-md-1">ID</th>
@@ -62,7 +64,7 @@
               </form>
               <!-- /.modal -->
 
-               @endforeach
-             </tbody>
-           </table>
-         </div>
+        @endforeach
+        </tbody>
+    </table>
+</div>
