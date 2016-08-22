@@ -8,9 +8,13 @@ use App\Http\Requests;
 
 class TableController extends Controller
 {
+    function __construct()
+    {
+       /* $this->middleware('auth');*/
+    }
+    
     public function index()
     {
-
         //Action bei $_POST[]
         //If Edit...
 
