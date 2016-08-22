@@ -10,6 +10,12 @@ class TableController extends Controller
 {
     public function index()
     {
+        //SQL Code?
+
+        //Arrays fuellen
+
+
+        //Arrays mit uebergeben
         return view('home');
     }
 }
