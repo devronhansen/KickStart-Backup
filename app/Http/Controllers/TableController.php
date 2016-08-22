@@ -3,28 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use App\Http\Requests;
 
 class TableController extends Controller
 {
     public function index()
     {
-        //SQL Code?
 
-        //Arrays fuellen
-        $news = array(
-            array('id' => '1', 'news_text' => 'Hallo Welt! Ich bin gaaaaaaaylord McFickster'),
-            array('id' => '2', 'news_text' => 'Ich bin auch ne News, voll cool und so'),
-        );
+        //Action bei $_POST[]
+        //If Edit...
 
-        //echo "<pre>";
-        //print_r(array_values($news));
-        //echo "</pre>";
+        //If Create...
 
-        //Arrays mit uebergeben
+        //If Delete...
+
+        $users = User::all();
+
         return view('home', [
-            'news' => $news,
+            "users" => $users,
             'test_text' => "ich bin ein test",
             'test_id' => "1",
             'test_header' => "huhu",
