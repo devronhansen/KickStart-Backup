@@ -7,7 +7,7 @@
            <table class="table table-striped table-hover table-bordered">
              <thead>
                <tr>
-                 <th>ID</th>
+                 <th class="col-md-1">ID</th>
                  <th>Header</th>
                  <th>Text</th>
                  <th>Delete</th>
