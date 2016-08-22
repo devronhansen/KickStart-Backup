@@ -1,6 +1,6 @@
 <?php
 
 
-Route::auth();
+/*Route::auth();*/
 
 Route::get('/', 'TableController@index');
