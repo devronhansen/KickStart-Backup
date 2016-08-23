@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#news">Home</a></li>
-                    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                    <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Tabelle 2</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Tabelle 3</a></li>
                 </ul>
                 <div class="tab-content">
 

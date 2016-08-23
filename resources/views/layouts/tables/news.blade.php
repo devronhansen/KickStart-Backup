@@ -50,7 +50,6 @@
         <tr>
             <th class="col-md-1">Titel</th>
             <th>Text</th>
-            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -59,7 +58,7 @@
             <tr>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->title }} </td>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->content }} </td>
-                <td>
+                <td class="tdcenter">
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
