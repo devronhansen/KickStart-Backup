@@ -33,7 +33,10 @@
                             <label for="pic-0">Bild:</label>
                             <img src="placeholder.png" class="img-responsive" alt="Bild" id="pic-0">
                         </div>
-
+                        <div class="form-group">
+                            <label for="file-0">Neues Bild hochladen:</label>
+                            <input type="file" id="file-0" name="file" accept="image/x-png, image/gif, image/jpeg">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <p></p>
@@ -101,7 +104,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
-                                    <input type="file" id="file" name="file">
+                                    <input type="file" id="file" name="file" accept="image/x-png, image/gif, image/jpeg">
                                 </div>
 
                             </div>
