@@ -1,4 +1,9 @@
 .tdcenter {
-    margin:0;
-    position:absolute;
+
+}
+
+.alert{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use Session;
 
 class NewsController extends Controller
 {
@@ -20,7 +21,7 @@ class NewsController extends Controller
             'content' => 'required'
         ));
 
-        /*Session::flash('success', 'The Post was successfully saved!');*/
+        Session::flash('success', 'The Post was successfully saved!');
 
         $news->update($request->all());
 
@@ -29,14 +30,12 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-
-
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
         ));
 
-        $news=new News;
+        $news = new News;
 
         $news->title = $request->title;
         $news->content = $request->content;
