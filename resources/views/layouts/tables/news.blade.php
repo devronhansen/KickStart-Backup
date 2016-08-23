@@ -63,7 +63,7 @@
             <tr>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->title }} </td>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->content }} </td>
-                <td>
+                <td style="width:20px;">
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
@@ -109,7 +109,8 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt am: {{ ($one_news->created_at->format('d.m.Y')) }}</p>
+                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}</p>
+                                <p>Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>
