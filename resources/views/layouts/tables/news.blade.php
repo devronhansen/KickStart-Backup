@@ -53,7 +53,7 @@
     <table class="table table-hover table-bordered">
         <thead>
         <tr>
-            <th class="col-md-1">Titel</th>
+            <th class="col-md-2">Titel</th>
             <th>Text</th>
         </tr>
         </thead>
@@ -61,8 +61,9 @@
         @foreach($news as $one_news)
             <!-- Tablerow -->
             <tr>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->title }} </td>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->content }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}" class="td-title"> {{ $one_news->title }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}" class="td-content"> {{ $one_news->content }} </td>
+
                 <td class="trash">
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
@@ -109,7 +110,8 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt am: {{ ($one_news->created_at->format('d.m.Y')) }}</p>
+                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}</p>
+                                <p>Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>

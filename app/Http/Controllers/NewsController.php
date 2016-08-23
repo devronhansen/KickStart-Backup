@@ -22,10 +22,10 @@ class NewsController extends Controller
             'content' => 'required'
         ));
 
-        Session::flash('success', 'The Post was successfully saved!');
-
-        $news->update($request->all());
         $news->edited_by = Auth::User()->id;
+        $news->update($request->all());
+
+        Session::flash('success', 'The Post was successfully saved!');
 
         return back();
     }
