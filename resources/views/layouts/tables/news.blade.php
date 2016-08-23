@@ -63,7 +63,7 @@
             <tr>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->title }} </td>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->content }} </td>
-                <td>
+                <td class="trash">
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
