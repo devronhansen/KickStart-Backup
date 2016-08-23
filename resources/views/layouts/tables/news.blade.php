@@ -46,12 +46,12 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="titel">Titel:</label>
-                                    <input type="text" class="form-control" id="titel" name="title">
+                                    <input type="text" class="form-control" id="titel" name="title" value="{{$one_news->title}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
                                     <textarea class="form-control" id="textblock" rows="3"
-                                              name="content"></textarea>
+                                              name="content">{{$one_news->content}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
@@ -62,6 +62,7 @@
                             <div class="modal-footer">
                                 <p>Ich wurde erstellt am: {{ ($one_news->created_at->format('d.m.Y')) }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
+                            </form>
                                 {{--<form method="POST" action="news/{{ $one_news->id }}" id="delete">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}--}}
