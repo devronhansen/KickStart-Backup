@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label for="textblock-0">Text:</label>
-                            <textarea class="form-control" id="textblock-0" rows="3" required
+                            <textarea class="form-control noresize" id="textblock-0" rows="3" required
                                       name="content"></textarea>
                         </div>
                         <div class="form-group">
