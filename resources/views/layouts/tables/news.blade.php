@@ -60,7 +60,7 @@
             <tr>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->title }} </td>
                 <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"> {{ $one_news->content }} </td>
-                <td class="tdcenter">
+                <td>
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
-                                    <textarea class="form-control" id="textblock" rows="3" required
+                                    <textarea class="form-control noresize" id="textblock" rows="3" required
                                               name="content">{{$one_news->content}}</textarea>
                                 </div>
                                 <div class="form-group">
