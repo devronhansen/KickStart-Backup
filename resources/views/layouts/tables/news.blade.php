@@ -2,8 +2,48 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-0">Neuer Eintrag</button>
     </div>
+        <!-- Modal -->
+            <div class="modal" id="model-0" tabindex="" role="dialog"
+                 aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                 <form method="POST" action="news" id="create">
+                     {{ csrf_field() }}
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Neuer Eintrag</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="titel-0">Titel:</label>
+                                    <input type="text" class="form-control" id="titel-0" name="title" maxlength="250">
+                                </div>
+                                <div class="form-group">
+                                    <label for="textblock-0">Text:</label>
+                                    <textarea class="form-control" id="textblock-0" rows="3"
+                                              name="content"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pic-0">Bild:</label>
+                                    <img src="placeholder.png" class="img-responsive" alt="Bild" id="pic-0">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <p></p>
+                                <button type="submit" class="btn btn-success">Speichern</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </form>
+            </div>
+        <!-- /.modal -->
     <br>
     <table class="table table-striped table-hover table-bordered">
         <thead>
@@ -29,7 +69,6 @@
             </tr>
 
             <!-- Modal -->
-
             <form method="POST" action="news/{{ $one_news->id }}">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
@@ -45,8 +84,8 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="titel">Titel:</label>
-                                    <input type="text" class="form-control" id="titel" name="title" value="{{$one_news->title}}">
+                                    <label for="titel-{{ $one_news->id }}">Titel:</label>
+                                    <input type="text" class="form-control" id="titel-{{ $one_news->id }}" name="title" value="{{$one_news->title}}" maxlength="250">
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
@@ -62,20 +101,13 @@
                             <div class="modal-footer">
                                 <p>Ich wurde erstellt am: {{ ($one_news->created_at->format('d.m.Y')) }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
-                            </form>
-                                {{--<form method="POST" action="news/{{ $one_news->id }}" id="delete">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}--}}
-                                <button type="submit" class="btn btn-danger" data-dismiss="modal" form="delete">Löschen</button>
-                                {{--     <button type="submit" class="btn btn-warning" data-dismiss="modal">Close</button>--}}
-                               {{-- </form>--}}
                             </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
                     <!-- /.modal-dialog -->
                 </div>
-
+            </form>
             <!-- /.modal -->
 
         @endforeach

@@ -27,6 +27,25 @@ class NewsController extends Controller
         return back();
     }
 
+    public function store(Request $request)
+    {
+
+
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ));
+
+        $news=new News;
+
+        $news->title = $request->title;
+        $news->content = $request->content;
+
+        $news->save();
+        return back();
+
+    }
+
     public function destroy(News $news)
     {
         $news->delete();
