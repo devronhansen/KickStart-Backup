@@ -3,6 +3,8 @@
 
 Route::auth();
 
+Route::get('/home', 'TableController@index');
+
 Route::get('/', 'TableController@index');
 
 Route::get('news', 'NewsController@index');
