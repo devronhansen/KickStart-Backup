@@ -11,22 +11,15 @@ class TableController extends Controller
 {
     function __construct()
     {
-       /* $this->middleware('auth');*/
+        /* $this->middleware('auth');*/
     }
 
     public function index()
     {
-        //Action bei $_POST[]
-        //If Edit...
-
-        //If Create...
-
-        //If Delete...
-
-        $data = News::all();
+        $news = News::all();
 
         return view('home', [
-            "data" => $data,
+            "news" => $news,
         ]);
     }
 }
