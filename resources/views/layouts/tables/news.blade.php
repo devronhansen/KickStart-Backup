@@ -99,6 +99,10 @@
                                     <label for="pic">Bild:</label>
                                     <img src="{{ $one_news->picture }}" class="img-responsive" alt="Bild">
                                 </div>
+                                <div class="form-group">
+                                    <label for="file">Neues Bild hochladen:</label>
+                                    <input type="file" id="file" name="file">
+                                </div>
 
                             </div>
                             <div class="modal-footer">
