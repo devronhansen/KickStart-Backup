@@ -50,7 +50,7 @@
     </div>
     <!-- /.modal -->
     <br>
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover {{--table-bordered--}}">
         <thead>
         <tr>
             <th class="col-md-2">Titel</th>
@@ -61,8 +61,10 @@
         @foreach($news as $one_news)
             <!-- Tablerow -->
             <tr>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}" class="td-title"> {{ $one_news->title }} </td>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}" class="td-content"> {{ $one_news->content }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"
+                    class="td-title"> {{ $one_news->title }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"
+                    class="td-content"> {{ $one_news->content }} </td>
 
                 <td class="trash">
                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
@@ -105,7 +107,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
-                                    <input type="file" id="file" name="file" accept="image/x-png, image/gif, image/jpeg">
+                                    <input type="file" id="file" name="file"
+                                           accept="image/x-png, image/gif, image/jpeg">
                                 </div>
 
                             </div>

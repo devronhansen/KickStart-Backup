@@ -25,7 +25,7 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->update($request->all());
 
-        Session::flash('success', 'The Post was successfully saved!');
+        Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
         return back();
     }
@@ -38,11 +38,11 @@ class NewsController extends Controller
         ));
 
         $news = new News;
-
         $news->title = $request->title;
         $news->content = $request->content;
         $news->edited_by = Auth::User()->id;
         $news->save();
+        Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 
     }
@@ -50,6 +50,7 @@ class NewsController extends Controller
     public function destroy(News $news)
     {
         $news->delete();
+        Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
     }
 }
