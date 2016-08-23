@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use Illuminate\Support\Facades\Auth;
 use Session;
 
 class NewsController extends Controller
@@ -24,6 +25,7 @@ class NewsController extends Controller
         Session::flash('success', 'The Post was successfully saved!');
 
         $news->update($request->all());
+        $news->edited_by = Auth::User()->id;
 
         return back();
     }
@@ -39,7 +41,7 @@ class NewsController extends Controller
 
         $news->title = $request->title;
         $news->content = $request->content;
-
+        $news->edited_by = Auth::User()->id;
         $news->save();
         return back();
 

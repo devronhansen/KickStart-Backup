@@ -27,6 +27,6 @@ class CreateOfferTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('offer');
     }
 }
