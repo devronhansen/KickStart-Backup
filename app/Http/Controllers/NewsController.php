@@ -53,14 +53,22 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
+        $filepath = pathinfo(Input::file('file_0'));
+        $accepted_extensions = Array('bmp', 'gif', 'jpeg', 'jpg','png');
+
     if(Input::file('file_0') != "")
     {
         //Pruefen, ob richtiges Format!!! (.jpg, .png)
-        $this->uploadPicture(Input::file('file_0'), $news->id);
+        if (in_array($filepath['extension'], $accepted_extensions)){
+            $this->uploadPicture(Input::file('file_0'), $news->id);
+        } else {
+            Session::flash('error', 'Beim Bildupload gab es einen Fehler!');
+        }
+
     }
 
 
-        Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
+        //Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 
     }
