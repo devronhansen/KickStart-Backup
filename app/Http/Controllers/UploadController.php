@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 use App\Http\Requests;
 use Session;
 
-class UploadController extends Controller
+class UploadController
 {
     public function uploadPicture($file, $id, $category)
     {
