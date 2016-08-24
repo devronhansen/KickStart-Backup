@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label for="textblock-0">Text:</label>
-                            <textarea class="form-control noresize" id="textblock-0" rows="3" required
+                            <textarea class="form-control noresize" id="textblock-0" rows="10" required
                                       name="content"></textarea>
                         </div>
                         <div class="form-group">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
-                                    <textarea class="form-control noresize" id="textblock" rows="3" required
+                                    <textarea class="form-control noresize" id="textblock" rows="10" required
                                               name="content">{{$one_news->content}}</textarea>
                                 </div>
                                 <div class="form-group">
@@ -133,7 +133,7 @@
                             </div>
                             <div class="modal-footer">
                                 <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}</p>
+                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }} von {{ $one_news->getname->name }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>
