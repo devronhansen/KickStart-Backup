@@ -64,12 +64,34 @@
                     class="td-content"> {{ $one_news->content }} </td>
 
                 <td class="trash">
-                    <form method="POST" action="news/{{ $one_news->id }}" id="delete">
+                    {{--<form method="POST" action="news/{{ $one_news->id }}" id="delete">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <button type="submit" class="btn btn-error"><span class="glyphicon glyphicon-trash"></span>
-                        </button>
-                    </form>
+                        </button>--}}
+                    <button type="button" class="btn btn-error" data-toggle="modal"
+                            data-target="#delete-modal-{{ $one_news->id }}"><span
+                                class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-{{ $one_news->id }}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
+                                </div>
+                                {{-- <div class="modal-body">
+                                     <p>One fine body&hellip;</p>
+                                 </div>--}}
+                                <div class="modal-footer">
+                                    <form method="POST" action="news/{{ $one_news->id }}" id="delete">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger">Eintrag löschen</button>
+                                    </form>
+                                </div>
+                    {{--</form>--}}
                 </td>
             </tr>
 
