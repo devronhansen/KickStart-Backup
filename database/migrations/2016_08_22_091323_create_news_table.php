@@ -16,7 +16,8 @@ class CreateNewsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
-            $table->integer('edited_by');
+            $table->integer('edited_by')->unsigned;
+            $table->foreign('edited_by')->references('id')->on('users');
             $table->timestamps();
         });
     }

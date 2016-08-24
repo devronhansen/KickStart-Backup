@@ -28,10 +28,8 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->update($request->all());
 
-        if(Input::file('file') != "")
-        {
+        if (Input::file('file') != "") {
             $this->uploadPicture(Input::file('file'), $news->id);
-            //$news->picture->update($news->id); //Fast ueberfluessig, wenn picture immer gleich id
         }
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
@@ -52,11 +50,10 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
-    if(Input::file('file_0') != "")
-    {
-        $this->uploadPicture(Input::file('file_0'), $news->id);
-        //$news->picture->update($news->id); //Fast ueberfluessig, wenn picture immer gleich id
-    }
+        if (Input::file('file_0') != "") {
+            $this->uploadPicture(Input::file('file_0'), $news->id);
+            //$news->picture->update($news->id); //Fast ueberfluessig, wenn picture immer gleich id
+        }
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
@@ -75,7 +72,7 @@ class NewsController extends Controller
     public function uploadPicture($file, $id)
     {
         $file->move("./files/temp", $file->getClientOriginalName());
-        $image = Image::make('./files/temp/' . $file->getClientOriginalName())->save('./files/news_'. $id .'.png');
+        $image = Image::make('./files/temp/' . $file->getClientOriginalName())->save('./files/news_' . $id . '.png');
         File::delete("./files/temp/" . $file->getClientOriginalName());
     }
 
