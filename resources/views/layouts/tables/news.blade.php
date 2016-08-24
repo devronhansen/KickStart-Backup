@@ -64,11 +64,6 @@
                     class="td-content"> {{ $one_news->content }} </td>
 
                 <td class="trash">
-                    {{--<form method="POST" action="news/{{ $one_news->id }}" id="delete">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <button type="submit" class="btn btn-error"><span class="glyphicon glyphicon-trash"></span>
-                        </button>--}}
                     <button type="button" class="btn btn-error" data-toggle="modal"
                             data-target="#delete-modal-{{ $one_news->id }}"><span
                                 class="glyphicon glyphicon-trash"></span>
@@ -81,9 +76,6 @@
                                                 aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
                                 </div>
-                                {{-- <div class="modal-body">
-                                     <p>One fine body&hellip;</p>
-                                 </div>--}}
                                 <div class="modal-footer">
                                     <form method="POST" action="news/{{ $one_news->id }}" id="delete">
                                         {{ csrf_field() }}
@@ -91,7 +83,9 @@
                                         <button type="submit" class="btn btn-danger">Eintrag löschen</button>
                                     </form>
                                 </div>
-                    {{--</form>--}}
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
 
@@ -99,7 +93,7 @@
             <form method="POST" action="news/{{ $one_news->id }}" files=true enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
-                <div class="modal" id="model-{{ $one_news->id }}" tabindex="" role="dialog"
+                <div class="modal fade" id="model-{{ $one_news->id }}" tabindex="" role="dialog"
                      aria-labelledby="myModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog">
@@ -133,7 +127,8 @@
                             </div>
                             <div class="modal-footer">
                                 <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }} von {{ $one_news->getname->name }}</p>
+                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}
+                                    von {{ $one_news->getname->name }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>

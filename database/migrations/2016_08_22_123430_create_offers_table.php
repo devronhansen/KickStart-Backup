@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOfferTable extends Migration
+class CreateOffersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateOfferTable extends Migration
      */
     public function up()
     {
-        Schema::create('offer', function (Blueprint $table) {
+        Schema::create('offers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateOfferTable extends Migration
      */
     public function down()
     {
-        Schema::drop('offer');
+        Schema::drop('offers');
     }
 }
