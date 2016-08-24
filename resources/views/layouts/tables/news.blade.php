@@ -10,7 +10,7 @@
     <div class="modal" id="model-0" tabindex="" role="dialog"
          aria-labelledby="myModalLabel"
          aria-hidden="true">
-        <form method="POST" action="news" id="create">
+        <form method="POST" action="news" id="create" files=true enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -34,13 +34,13 @@
                             <img src="placeholder.png" class="img-responsive" alt="Bild" id="pic-0">
                         </div>
                         <div class="form-group">
-                            <label for="file-0">Neues Bild hochladen:</label>
-                            <input type="file" id="file-0" name="file" accept="image/x-png, image/gif, image/jpeg">
+                            <label for="file_0">Neues Bild hochladen:</label>
+                            <input type="file" id="file_0" name="file_0" accept="image/x-png, image/gif, image/jpeg">
                         </div>
                     </div>
                     <div class="modal-footer">
                         <p></p>
-                        <button type="submit" class="btn btn-success">Speichern</button>
+                        <button type="submit" class="btn btn-success" name="submit">Speichern</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="{{ $one_news->picture }}" class="img-responsive" alt="Bild">
+                                    <img src="files/news_{{ $one_news->id }}.png" class="img-responsive" alt="Bild">
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
