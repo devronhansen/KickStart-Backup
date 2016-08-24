@@ -9,9 +9,8 @@
 
     <!-- Fonts -->
 
-    <link rel="stylesheet" href="/css/font-awesome.min.css"> {{--doesn't work--}}
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/googlefont-lato.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}

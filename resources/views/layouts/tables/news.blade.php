@@ -55,6 +55,7 @@
         <tr>
             <th class="col-md-2">Titel</th>
             <th>Text</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -113,8 +114,8 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}</p>
-                                <p>Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}</p>
+                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
+                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>
