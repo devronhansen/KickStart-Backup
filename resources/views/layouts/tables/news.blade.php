@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label for="file_0">Neues Bild hochladen:</label>
-                            <input type="file" id="file_0" name="file_0" accept="image/x-png, image/gif, image/jpeg">
+                            <input type="file" id="file_0" name="file_0" accept=".bmp, .gif, .jpeg, .jpg, .png">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -116,12 +116,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.png" class="img-responsive" alt="Bild">
+                                    <img src="files/news_{{ $one_news->id }}.png" class="img-responsive" alt="Kein Bild vorhanden" onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
-                                    <input type="file" id="file" name="file"
-                                           accept="image/x-png, image/gif, image/jpeg">
+                                    <input type="file" id="file" name="file" accept=".bmp, .gif, .jpeg, .jpg, .png">
                                 </div>
 
                             </div>

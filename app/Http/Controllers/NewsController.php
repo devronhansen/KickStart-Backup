@@ -8,8 +8,6 @@ use App\News;
 use Illuminate\Support\Facades\Auth;
 use Session;
 use Illuminate\Support\Facades\Input;
-use Intervention\Image\ImageManagerStatic as Image;
-use Illuminate\Support\Facades\File;
 
 class NewsController extends Controller
 {
@@ -28,9 +26,7 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->update($request->all());
 
-        if (Input::file('file') != "") {
-            $this->uploadPicture(Input::file('file'), $news->id);
-        }
+        app('App\Http\Controllers\UploadController')->uploadPicture(Input::file('file'), $news->id, "news");
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
@@ -50,10 +46,7 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
-        if (Input::file('file_0') != "") {
-            $this->uploadPicture(Input::file('file_0'), $news->id);
-            //$news->picture->update($news->id); //Fast ueberfluessig, wenn picture immer gleich id
-        }
+        app('App\Http\Controllers\UploadController')->uploadPicture(Input::file('file_0'), $news->id, "news");
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
@@ -63,22 +56,9 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
-        $this->deletePicture($news->id);
+        app('App\Http\Controllers\UploadController')->deletePicture($news->id, "news");
         $news->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
     }
-
-    public function uploadPicture($file, $id)
-    {
-        $file->move("./files/temp", $file->getClientOriginalName());
-        $image = Image::make('./files/temp/' . $file->getClientOriginalName())->save('./files/news_' . $id . '.png');
-        File::delete("./files/temp/" . $file->getClientOriginalName());
-    }
-
-    public function deletePicture($id)
-    {
-        File::delete("./files/news_" . $id . ".png");
-    }
-
 }
