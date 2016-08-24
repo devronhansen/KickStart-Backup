@@ -30,10 +30,6 @@
                                       name="content"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="pic-0">Bild:</label>
-                            <img src="placeholder.png" class="img-responsive" alt="Bild" id="pic-0">
-                        </div>
-                        <div class="form-group">
                             <label for="file_0">Neues Bild hochladen:</label>
                             <input type="file" id="file_0" name="file_0" accept="image/x-png, image/gif, image/jpeg">
                         </div>
@@ -78,7 +74,7 @@
             </tr>
 
             <!-- Modal -->
-            <form method="POST" action="news/{{ $one_news->id }}">
+            <form method="POST" action="news/{{ $one_news->id }}" files=true enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
                 <div class="modal" id="model-{{ $one_news->id }}" tabindex="" role="dialog"

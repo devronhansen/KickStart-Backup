@@ -28,6 +28,12 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->update($request->all());
 
+        if(Input::file('file') != "")
+        {
+            $this->uploadPicture(Input::file('file'), $news->id);
+            //$news->picture->update($news->id); //Fast ueberfluessig, wenn picture immer gleich id
+        }
+
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
         return back();
