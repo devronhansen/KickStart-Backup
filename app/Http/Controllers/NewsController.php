@@ -66,6 +66,7 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
+        $this->deletePicture($news->id);
         $news->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
@@ -77,4 +78,10 @@ class NewsController extends Controller
         $image = Image::make('./files/temp/' . $file->getClientOriginalName())->save('./files/news_'. $id .'.png');
         File::delete("./files/temp/" . $file->getClientOriginalName());
     }
+
+    public function deletePicture($id)
+    {
+        File::delete("./files/news_" . $id . ".png");
+    }
+
 }
