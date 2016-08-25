@@ -36,8 +36,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="file_0">Neues Bild hochladen:</label>
-                            <input type="file" id="file_0" name="file_0" accept=".bmp, .gif, .jpeg, .jpg, .png">
+                            <label class="btn btn-primary btn-file">
+                                Neues Bild hochladen <input type="file" name="file_0"
+                                                            accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                                            style="display: none;">
+                            </label>
+                            <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -140,8 +144,12 @@
                                          onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
-                                    <label for="file">Neues Bild hochladen:</label>
-                                    <input type="file" id="file" name="file" accept=".bmp, .gif, .jpeg, .jpg, .png">
+                                    <label class="btn btn-primary btn-file">
+                                        Neues Bild hochladen <input type="file" name="file_0"
+                                                                    accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                                                    style="display: none;">
+                                    </label>
+                                    <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                                 </div>
 
                             </div>

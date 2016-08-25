@@ -30,7 +30,7 @@ class OfferDetailController extends Controller
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
-        return back();
+        return redirect('/#offer_detail');
     }
 
     public function store(Request $request)
@@ -51,7 +51,7 @@ class OfferDetailController extends Controller
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
-        return back();
+        return redirect('/#offer_detail');
 
     }
 
@@ -60,6 +60,6 @@ class OfferDetailController extends Controller
         deletePicture($offer_detail->id, "offer_detail");
         $offer_detail->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
-        return back();
+        return redirect('/#offer_detail');
     }
 }
