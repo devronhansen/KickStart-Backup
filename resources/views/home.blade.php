@@ -6,7 +6,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
-                    <li><a data-toggle="tab" href="#menu1">Tabelle 2</a></li>
+                    <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
                     <li><a data-toggle="tab" href="#menu2">Tabelle 3</a></li>
                 </ul>
                 <div class="tab-content">
@@ -15,9 +15,8 @@
                         @include('layouts.tables.news')
                     </div>
 
-                    <div id="menu1" class="tab-pane fade">
-                        <h3>Menu 1</h3>
-                        <p>Some content in menu 1.</p>
+                    <div id="offer_detail" class="tab-pane fade">
+                        @include('layouts.tables.offer_detail')
                     </div>
 
                     <div id="menu2" class="tab-pane fade">

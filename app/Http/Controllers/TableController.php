@@ -23,7 +23,9 @@ class TableController extends Controller
         $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
         $offer = Offer::all()->sortBy('title');
         return view('home', [
-            "news" => $news, "offer_detail" => $offer_detail, "offer" => $offer
+            "news" => $news,
+            "offer_detail" => $offer_detail,
+            "offer" => $offer
         ]);
     }
 }
