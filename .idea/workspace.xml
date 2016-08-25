@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcf488c1-578e-497e-91cf-2c6982866d89" name="Default" comment="Offer und Offer_Detail werden übergeben + Beziehungen und Fillables angelegt&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php" />
     </list>
     <ignored path="KickStart_CMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfferDetail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OfferDetail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/OfferDetail.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_08_24_154500_create_offerdetails_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -147,7 +157,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Offer_DetailController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_24_151444_create_offersdetails_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UploadController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/upload.php" />
@@ -160,6 +169,7 @@
         <option value="$PROJECT_DIR$/app/OfferDetail.php" />
         <option value="$PROJECT_DIR$/app/News.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php" />
       </list>
     </option>
   </component>
@@ -336,7 +346,7 @@
       <workItem from="1472103395437" duration="65000" />
       <workItem from="1472103481952" duration="152000" />
       <workItem from="1472103651717" duration="5237000" />
-      <workItem from="1472111334122" duration="1708000" />
+      <workItem from="1472111334122" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="Tabelle news jetzt ohne Picture">
       <created>1472028976415</created>
@@ -384,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64806000" />
+    <option name="totallyTimeSpent" value="64946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -691,23 +701,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <marker date="1472111301800" expanded="false" signature="11:94" ph="..." />
-            <marker date="1472111301800" expanded="true" signature="143:885" ph="{...}" />
-            <marker date="1472111301800" expanded="true" signature="153:213" ph=" Run the migrations. ..." />
-            <marker date="1472111301800" expanded="true" signature="240:730" ph="{...}" />
-            <marker date="1472111301800" expanded="true" signature="270:722" ph="..." />
-            <marker date="1472111301800" expanded="true" signature="316:721" ph="..." />
-            <marker date="1472111301800" expanded="true" signature="739:803" ph=" Reverse the migrations. ..." />
-            <marker date="1472111301800" expanded="true" signature="832:883" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -833,8 +826,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/OfferDetail.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_24_154500_create_offerdetails_table.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
           <folding />
         </state>
       </provider>

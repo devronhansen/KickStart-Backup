@@ -19,7 +19,7 @@ class CreateOfferdetailsTable extends Migration
             $table->integer('offerid')->unsigned();
             $table->foreign('offerid')->references('id')->on('offers');
             $table->integer('edited_by')->unsigned();
-            $table->foreign('edited_by')->references('id')->on('user');
+            $table->foreign('edited_by')->references('id')->on('users');
             $table->timestamps();
         });
     }
