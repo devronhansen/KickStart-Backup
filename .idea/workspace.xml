@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fcf488c1-578e-497e-91cf-2c6982866d89" name="Default" comment="Optische Anpassungen + Öffnungszeiten">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php" />
     </list>
     <ignored path="KickStart_CMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,15 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="142" column="78" selection-start-line="142" selection-start-column="78" selection-end-line="143" selection-end-column="119" />
+            <state relative-caret-position="560">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="e#864#871#0#HTML" expanded="true" />
-                <element signature="e#7271#7277#0#HTML" expanded="true" />
-                <element signature="e#8336#8342#0#HTML" expanded="true" />
+                <element signature="e#2584#2590#0#HTML" expanded="true" />
+                <element signature="e#7413#7419#0#HTML" expanded="true" />
+                <element signature="e#8478#8484#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,11 +97,12 @@
       <file leaf-file-name="offer_detail.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="168" column="110" selection-start-line="168" selection-start-column="110" selection-end-line="168" selection-end-column="110" />
+            <state relative-caret-position="560">
+              <caret line="53" column="125" selection-start-line="53" selection-start-column="125" selection-end-line="53" selection-end-column="125" />
               <folding>
-                <element signature="e#8947#8953#0#HTML" expanded="true" />
-                <element signature="e#10036#10042#0#HTML" expanded="true" />
+                <element signature="e#3088#3094#0#HTML" expanded="true" />
+                <element signature="e#9089#9095#0#HTML" expanded="true" />
+                <element signature="e#10178#10184#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,31 +118,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php">
+      <file leaf-file-name="time.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="146" column="119" selection-start-line="146" selection-start-column="119" selection-end-line="146" selection-end-column="119" />
+            <state relative-caret-position="616">
+              <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="116" />
               <folding>
-                <element signature="e#269#275#0#HTML" expanded="true" />
+                <element signature="e#265#271#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#7375#7381#0#HTML" expanded="true" />
-                <element signature="e#8446#8452#0#HTML" expanded="true" />
+                <element signature="e#2589#2595#0#HTML" expanded="true" />
+                <element signature="e#7461#7467#0#HTML" expanded="true" />
+                <element signature="e#8526#8532#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
+      <file leaf-file-name="person.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
+            <state relative-caret-position="448">
+              <caret line="46" column="125" selection-start-line="46" selection-start-column="125" selection-end-line="46" selection-end-column="125" />
               <folding>
-                <element signature="e#265#271#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#7319#7325#0#HTML" expanded="true" />
-                <element signature="e#8384#8390#0#HTML" expanded="true" />
+                <element signature="e#2597#2603#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,10 +205,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/TableController.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" />
       </list>
     </option>
   </component>
@@ -475,7 +479,7 @@
       <workItem from="1472103395437" duration="65000" />
       <workItem from="1472103481952" duration="152000" />
       <workItem from="1472103651717" duration="5237000" />
-      <workItem from="1472111334122" duration="16174000" />
+      <workItem from="1472111334122" duration="16332000" />
     </task>
     <task id="LOCAL-00001" summary="Tabelle news jetzt ohne Picture">
       <created>1472028976415</created>
@@ -561,11 +565,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472129972573</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Optische Anpassungen + Öffnungszeiten">
+      <created>1472130038610</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1472130038610</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79272000" />
+    <option name="totallyTimeSpent" value="79430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -942,29 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="142" column="78" selection-start-line="142" selection-start-column="78" selection-end-line="143" selection-end-column="119" />
-          <folding>
-            <element signature="e#864#871#0#HTML" expanded="true" />
-            <element signature="e#7271#7277#0#HTML" expanded="true" />
-            <element signature="e#8336#8342#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="168" column="110" selection-start-line="168" selection-start-column="110" selection-end-line="168" selection-end-column="110" />
-          <folding>
-            <element signature="e#8947#8953#0#HTML" expanded="true" />
-            <element signature="e#10036#10042#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PersonController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-854">
@@ -973,28 +961,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="146" column="119" selection-start-line="146" selection-start-column="119" selection-end-line="146" selection-end-column="119" />
+        <state relative-caret-position="616">
+          <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="116" />
           <folding>
-            <element signature="e#269#275#0#HTML" expanded="true" />
+            <element signature="e#265#271#0#HTML" expanded="true" />
             <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#7375#7381#0#HTML" expanded="true" />
-            <element signature="e#8446#8452#0#HTML" expanded="true" />
+            <element signature="e#2589#2595#0#HTML" expanded="true" />
+            <element signature="e#7461#7467#0#HTML" expanded="true" />
+            <element signature="e#8526#8532#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
+        <state relative-caret-position="448">
+          <caret line="46" column="125" selection-start-line="46" selection-start-column="125" selection-end-line="46" selection-end-column="125" />
           <folding>
-            <element signature="e#265#271#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#7319#7325#0#HTML" expanded="true" />
-            <element signature="e#8384#8390#0#HTML" expanded="true" />
+            <element signature="e#2597#2603#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="53" column="125" selection-start-line="53" selection-start-column="125" selection-end-line="53" selection-end-column="125" />
+          <folding>
+            <element signature="e#3088#3094#0#HTML" expanded="true" />
+            <element signature="e#9089#9095#0#HTML" expanded="true" />
+            <element signature="e#10178#10184#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="e#864#871#0#HTML" expanded="true" />
+            <element signature="e#2584#2590#0#HTML" expanded="true" />
+            <element signature="e#7413#7419#0#HTML" expanded="true" />
+            <element signature="e#8478#8484#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -50,7 +50,9 @@
                     </div>
                     <div class="modal-footer">
                         <p></p>
-                        <button type="submit" class="btn btn-success" name="submit">Speichern</button>
+                        <button type="submit" class="btn btn-success" name="submit"><i class="fa fa-floppy-o"
+                                                                                       aria-hidden="true"></i>&ensp;Speichern
+                        </button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
