@@ -55,20 +55,20 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($news as $one_news)
+        @for($i = count($news)-1; $i >= 0; $i--)
             <!-- Tablerow -->
             <tr>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"
-                    class="td-title"> {{ $one_news->title }} </td>
-                <td data-toggle="modal" data-target="#model-{{ $one_news->id }}"
-                    class="td-content"> {{ $one_news->content }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $news[$i]->id }}"
+                    class="td-title"> {{ $news[$i]->title }} </td>
+                <td data-toggle="modal" data-target="#model-{{ $news[$i]->id }}"
+                    class="td-content"> {{ $news[$i]->content }} </td>
 
                 <td class="trash">
                     <button type="button" class="btn btn-error" data-toggle="modal"
-                            data-target="#delete-modal-{{ $one_news->id }}"><span
+                            data-target="#delete-modal-{{ $news[$i]->id }}"><span
                                 class="glyphicon glyphicon-trash"></span>
                     </button>
-                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-{{ $one_news->id }}">
+                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-{{ $news[$i]->id }}">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -77,7 +77,7 @@
                                     <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
                                 </div>
                                 <div class="modal-footer">
-                                    <form method="POST" action="news/{{ $one_news->id }}" id="delete">
+                                    <form method="POST" action="news/{{ $news[$i]->id }}" id="delete">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-danger">Eintrag löschen</button>
@@ -90,10 +90,10 @@
             </tr>
 
             <!-- Modal -->
-            <form method="POST" action="news/{{ $one_news->id }}" files=true enctype="multipart/form-data">
+            <form method="POST" action="news/{{ $news[$i]->id }}" files=true enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
-                <div class="modal fade" id="model-{{ $one_news->id }}" tabindex="" role="dialog"
+                <div class="modal fade" id="model-{{ $news[$i]->id }}" tabindex="" role="dialog"
                      aria-labelledby="myModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog">
@@ -105,18 +105,20 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="titel-{{ $one_news->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_news->id }}" name="title"
-                                           value="{{$one_news->title}}" maxlength="250" required>
+                                    <label for="titel-{{ $news[$i]->id }}">Titel:</label>
+                                    <input type="text" class="form-control" id="titel-{{ $news[$i]->id }}" name="title"
+                                           value="{{$news[$i]->title}}" maxlength="250" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
                                     <textarea class="form-control noresize" id="textblock" rows="10" required
-                                              name="content">{{$one_news->content}}</textarea>
+                                              name="content">{{$news[$i]->content}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.png" class="img-responsive" alt="Kein Bild vorhanden" onerror="this.onerror=null;this.src='./files/placeholder.png';">
+                                    <img src="files/news_{{ $news[$i]->id }}.png" class="img-responsive"
+                                         alt="Kein Bild vorhanden"
+                                         onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
@@ -125,9 +127,9 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}
-                                    von {{ $one_news->getname->name }}</p>
+                                <p>Eintrag erstellt: {{ ($news[$i]->created_at->format('d.m.Y H:i:s')) }}<br>
+                                    Eintrag bearbeitet: {{ ($news[$i]->updated_at->format('d.m.Y H:i:s')) }}
+                                    von {{ $news[$i]->getname->name }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>
@@ -137,8 +139,7 @@
                 </div>
             </form>
             <!-- /.modal -->
-
-        @endforeach
+        @endfor
         </tbody>
     </table>
 </div>

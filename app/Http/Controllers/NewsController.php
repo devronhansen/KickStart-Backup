@@ -46,7 +46,7 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
-        app('App\Http\Controllers\UploadController')->uploadPicture(Input::file('file_0'), $news->id, "news");
+        uploadPicture(Input::file('file_0'), $news->id, "news");
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
@@ -56,7 +56,7 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
-        app('App\Http\Controllers\UploadController')->deletePicture($news->id, "news");
+        deletePicture($news->id, "news");
         $news->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
