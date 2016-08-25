@@ -11,6 +11,6 @@ class OfferDetailController extends Controller
 {
     public function index()
     {
-        return OfferDetail::all();
+        return OfferDetail::all()->sortBy('updated_at');
     }
 }

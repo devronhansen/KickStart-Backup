@@ -13,9 +13,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $order = 'updated_at';
-        $news = News::all()->sortByDesc($order);
-        return $news;
+        return $news = News::all()->sortByDesc('updated_at');
     }
 
     public function update(Request $request, News $news)

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\OfferDetail;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
 use App\News;
-// import the Intervention Image Manager Class
 use Intervention\Image\ImageManagerStatic as Image;
+use App\Offer;
 
 class TableController extends Controller
 {
@@ -18,11 +19,11 @@ class TableController extends Controller
 
     public function index()
     {
-        $order = 'updated_at';
-        $news = News::all()->sortByDesc($order);
-
+        $news = News::all()->sortByDesc('updated_at');
+        $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
+        $offer = Offer::all()->sortBy('title');
         return view('home', [
-            "news" => $news,
+            "news" => $news, "offer_detail" => $offer_detail, "offer" => $offer
         ]);
     }
 }

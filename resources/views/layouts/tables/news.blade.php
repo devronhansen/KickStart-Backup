@@ -127,7 +127,7 @@
                             <div class="modal-footer">
                                 <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
                                     Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}
-                                    von {{ $one_news->getname->name }}</p>
+                                    von {{ $one_news->getUser->name }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>

@@ -10,7 +10,7 @@ class News extends Model
         'title', 'content', 'picture',
     ];
 
-    public function getname() //Verbindung via Foreign Key herstellen
+    public function getUser()
     {
         return $this->belongsTo('App\User', 'edited_by', 'id');
     }
