@@ -35,3 +35,5 @@ option {
   background:white;
   padding:.25em 1em .25em 1em;
 }
+
+.modal .modal-dialog { width: 700px; }
