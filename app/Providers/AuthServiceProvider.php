@@ -26,6 +26,24 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        //
+        $gate->define('see-news', function ($user) {
+            return $user->news;
+        });
+
+        $gate->define('see-offer_detail', function ($user) {
+            return $user->offer_detail;
+        });
+
+        $gate->define('see-person', function ($user) {
+            return $user->person;
+        });
+
+        $gate->define('see-time', function ($user) {
+            return $user->time;
+        });
+
+        $gate->define('see-menu', function ($user) {
+            return $user->menu;
+        });
     }
 }

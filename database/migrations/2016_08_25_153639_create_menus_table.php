@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenuTable extends Migration
+class CreateMenusTable extends Migration
 {
     public function up()
     {
@@ -19,6 +19,6 @@ class CreateMenuTable extends Migration
 
     public function down()
     {
-        Schema::drop('times');
+        Schema::drop('menus');
     }
 }

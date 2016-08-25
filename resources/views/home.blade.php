@@ -5,11 +5,21 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
-                    <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
-                    <li><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
-                    <li><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
-                    <li><a data-toggle="tab" href="#menu">Speiseplan</a></li>
+                    @can('see-news')
+                        <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
+                    @endcan
+                    @can('see-offer_detail')
+                        <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
+                    @endcan
+                    @can('see-person')
+                        <li><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
+                    @endcan
+                    @can('see-time')
+                        <li><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
+                    @endcan
+                    @can('see-menu')
+                        <li><a data-toggle="tab" href="#menu">Speiseplan</a></li>
+                    @endcan
                 </ul>
                 <div class="tab-content">
 
