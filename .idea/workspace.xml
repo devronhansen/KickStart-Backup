@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcf488c1-578e-497e-91cf-2c6982866d89" name="Default" comment="Optische Anpassungen">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php" />
+    <list default="true" id="fcf488c1-578e-497e-91cf-2c6982866d89" name="Default" comment="Optische Anpassungen + Öffnungszeiten">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/news.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/offer_detail.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/tables/person.blade.php" />
     </list>
     <ignored path="KickStart_CMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,8 +130,8 @@
       <file leaf-file-name="time.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+            <state relative-caret-position="518">
+              <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
               <folding>
                 <element signature="e#265#271#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -482,7 +475,7 @@
       <workItem from="1472103395437" duration="65000" />
       <workItem from="1472103481952" duration="152000" />
       <workItem from="1472103651717" duration="5237000" />
-      <workItem from="1472111334122" duration="16091000" />
+      <workItem from="1472111334122" duration="16174000" />
     </task>
     <task id="LOCAL-00001" summary="Tabelle news jetzt ohne Picture">
       <created>1472028976415</created>
@@ -561,11 +554,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472126721186</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Optische Anpassungen + Öffnungszeiten">
+      <created>1472129972573</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1472129972573</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79189000" />
+    <option name="totallyTimeSpent" value="79272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -605,6 +605,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Tabelle news jetzt ohne Picture" />
@@ -618,7 +619,8 @@
     <MESSAGE value="JQuery um auf den richtigen Tab zu refreshen + anpassungen im Controller" />
     <MESSAGE value="Anpassungen auch im Person Controller" />
     <MESSAGE value="Optische Anpassungen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optische Anpassungen" />
+    <MESSAGE value="Optische Anpassungen + Öffnungszeiten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optische Anpassungen + Öffnungszeiten" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -986,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/tables/time.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+        <state relative-caret-position="518">
+          <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
           <folding>
             <element signature="e#265#271#0#HTML" expanded="true" />
             <element signature="n#style#0;n#input#0;n#label#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
