@@ -26,12 +26,17 @@ class TableController extends Controller
         $offer = Offer::all()->sortBy('title');
         $person = Person::all()->sortBy('title');
         $time = Time::all()->sortBy('title');
+        $menu = "1";
+        $today = strtotime('monday this week');
+
         return view('home', [
             "news" => $news,
             "offer_detail" => $offer_detail,
             "offer" => $offer,
             "person" => $person,
             "time" => $time,
+            "menu" => $menu,
+            "today" => $today,
         ]);
     }
 }

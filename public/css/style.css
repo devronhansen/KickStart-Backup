@@ -35,3 +35,11 @@ option {
   background:white;
   padding:.25em 1em .25em 1em;
 }
+
+.transparentbackground {
+  background-color: rgba(0,0,0,0.0) !important;
+}
+
+.nopadding {
+  padding: 0,0,0,0;
+}
