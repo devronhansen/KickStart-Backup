@@ -20,18 +20,6 @@ class TableController extends Controller
     {
         $news = News::all();
 
-        /*
-        $img = Image::canvas(800, 600, '#c00')->save('files\bar.png');;
-        $imgstring = $img->dirname."/".$img->basename;
-
-        foreach ($news as $data) {
-            if($data->picture == "")
-            {
-                $data->picture = $imgstring;
-            }
-        }
-        */
-
         return view('home', [
             "news" => $news,
         ]);
