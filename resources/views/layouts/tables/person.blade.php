@@ -159,4 +159,4 @@
         @endforeach
         </tbody>
     </table>
-</div> {{dd($person)}}
+</div>
