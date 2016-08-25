@@ -43,3 +43,5 @@ option {
 .nopadding {
   padding: 0,0,0,0;
 }
+
+.modal .modal-dialog { width: 700px; }

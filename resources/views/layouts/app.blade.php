@@ -8,7 +8,7 @@
     <title>KickStart CMS</title>
 
     <!-- Fonts -->
-
+    <link rel="shortcut icon" href="{{ asset('icon.png') }}">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/googlefont-lato.css">
     <!-- Styles -->

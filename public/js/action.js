@@ -17,3 +17,5 @@ $(document).on('change', ':file', function () {
     input.trigger('fileselect', [numFiles, label]);
     $('.download-pic').html(label);
 });
+
+$(doc
