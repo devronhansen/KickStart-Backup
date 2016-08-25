@@ -29,7 +29,7 @@ class PersonController extends Controller
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
-        return back();
+        return redirect('/#person');
     }
 
     public function store(Request $request)
@@ -49,7 +49,7 @@ class PersonController extends Controller
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
-        return back();
+        return redirect('/#person');
 
     }
 
@@ -58,6 +58,6 @@ class PersonController extends Controller
         deletePicture($person->id, "person");
         $person->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
-        return back();
+        return redirect('/#person');
     }
 }
