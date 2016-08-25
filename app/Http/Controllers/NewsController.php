@@ -58,7 +58,7 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
-        app('App\Http\Controllers\UploadController')->deletePicture($news->id, "news");
+        deletePicture($news->id, "news");
         $news->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();

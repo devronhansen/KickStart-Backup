@@ -2,9 +2,7 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-0">Neuer
-            Eintrag
-        </button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-0">Neuer Eintrag</button>
     </div>
     <!-- Modal -->
     <div class="modal" id="model-0" tabindex="" role="dialog"
@@ -116,7 +114,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.jpg" class="img-responsive" alt="Kein Bild vorhanden" onerror="this.onerror=null;this.src='./files/placeholder.png';">
+                                    <img src="files/news_{{ $one_news->id }}.jpg" class="img-responsive"
+                                         alt="Kein Bild vorhanden"
+                                         onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>
@@ -137,7 +137,6 @@
                 </div>
             </form>
             <!-- /.modal -->
-
         @endforeach
         </tbody>
     </table>

@@ -18,7 +18,8 @@ class TableController extends Controller
 
     public function index()
     {
-        $news = News::all();
+        $order = 'updated_at';
+        $news = News::all()->sortByDesc($order);
 
         return view('home', [
             "news" => $news,
