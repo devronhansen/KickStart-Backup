@@ -28,6 +28,14 @@
                                       name="content"></textarea>
                         </div>
                         <div class="form-group">
+                            <label for="dropdown">Angebot von:</label>
+                            <select name="offer" size="1">
+                                @foreach($offer as $one_offer)
+                                    <option value="{{$one_offer->id}}">{{$one_offer->title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="file_0">Neues Bild hochladen:</label>
                             <input type="file" id="file_0" name="file_0" accept=".bmp, .gif, .jpeg, .jpg, .png">
                         </div>
@@ -111,6 +119,19 @@
                                     <label for="textblock">Text:</label>
                                     <textarea class="form-control noresize" id="textblock" rows="10" required
                                               name="content">{{$one_offer_detail->content}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropdown">Angebot von:</label>
+                                    <select name="offer" size="1">
+                                        @foreach($offer as $one_offer)
+                                            @if ($one_offer_detail->offerid == $one_offer->id)
+                                                <option value="{{$one_offer->id}}" selected="selected">
+                                            @else
+                                                <option value="{{$one_offer->id}}">
+                                            @endif
+                                            {{$one_offer->title}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>

@@ -23,6 +23,7 @@ class OfferDetailController extends Controller
         ));
 
         $offer_detail->edited_by = Auth::User()->id;
+        $offer_detail->offerid = $request->offer;
         $offer_detail->update($request->all());
 
         uploadPicture(Input::file('file'), $offer_detail->id, "offer_detail");
@@ -43,7 +44,7 @@ class OfferDetailController extends Controller
         $offer_detail->title = $request->title;
         $offer_detail->content = $request->content;
         $offer_detail->edited_by = Auth::User()->id;
-        $offer_detail->offerid = 1;
+        $offer_detail->offerid = $request->offer;
         $offer_detail->save();
 
         uploadPicture(Input::file('file_0'), $offer_detail->id, "offer_detail");
