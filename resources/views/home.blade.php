@@ -7,7 +7,7 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
-                    <li><a data-toggle="tab" href="#menu2">Tabelle 3</a></li>
+                    <li><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
                 </ul>
                 <div class="tab-content">
 
@@ -19,9 +19,8 @@
                         @include('layouts.tables.offer_detail')
                     </div>
 
-                    <div id="menu2" class="tab-pane fade">
-                        <h3>Menu 2</h3>
-                        <p>Some content in menu 2.</p>
+                    <div id="person" class="tab-pane fade">
+                        @include('layouts.tables.person')
                     </div>
 
                 </div>

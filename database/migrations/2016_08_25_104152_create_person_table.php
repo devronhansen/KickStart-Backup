@@ -7,7 +7,7 @@ class CreatePersonTable extends Migration
 {
     public function up()
     {
-        Schema::create('persons', function (Blueprint $table) {
+        Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->text('content');
@@ -19,6 +19,6 @@ class CreatePersonTable extends Migration
 
     public function down()
     {
-        Schema::drop('persons');
+        Schema::drop('people');
     }
 }
