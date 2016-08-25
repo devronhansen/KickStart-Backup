@@ -1,14 +1,14 @@
-<!-- Table News-->
+<!-- Table offer_detail-->
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-news-0">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-offer_detail-0">Neuer Eintrag</button>
     </div>
     <!-- Modal -->
-    <div class="modal" id="model-news-0" tabindex="" role="dialog"
+    <div class="modal" id="model-offer_detail-0" tabindex="" role="dialog"
          aria-labelledby="myModalLabel"
          aria-hidden="true">
-        <form method="POST" action="news" id="create" files=true enctype="multipart/form-data">
+        <form method="POST" action="offer_detail" id="create" files=true enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -53,20 +53,20 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($news as $one_news)
+        @foreach($offer_detail as $one_offer_detail)
             <!-- Tablerow -->
             <tr>
-                <td data-toggle="modal" data-target="#model-news-{{ $one_news->id }}"
-                    class="td-title"> {{ $one_news->title }} </td>
-                <td data-toggle="modal" data-target="#model-news-{{ $one_news->id }}"
-                    class="td-content"> {{ $one_news->content }} </td>
+                <td data-toggle="modal" data-target="#model-offer_detail-{{ $one_offer_detail->id }}"
+                    class="td-title"> {{ $one_offer_detail->title }} </td>
+                <td data-toggle="modal" data-target="#model-offer_detail-{{ $one_offer_detail->id }}"
+                    class="td-content"> {{ $one_offer_detail->content }} </td>
 
                 <td class="trash">
                     <button type="button" class="btn btn-error" data-toggle="modal"
-                            data-target="#delete-modal-news-{{ $one_news->id }}"><span
+                            data-target="#delete-modal-offer_detail-{{ $one_offer_detail->id }}"><span
                                 class="glyphicon glyphicon-trash"></span>
                     </button>
-                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-news-{{ $one_news->id }}">
+                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-offer_detail-{{ $one_offer_detail->id }}">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -75,7 +75,7 @@
                                     <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
                                 </div>
                                 <div class="modal-footer">
-                                    <form method="POST" action="news/{{ $one_news->id }}" id="delete">
+                                    <form method="POST" action="offer_detail/{{ $one_offer_detail->id }}" id="delete">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-danger">Eintrag löschen</button>
@@ -88,10 +88,10 @@
             </tr>
 
             <!-- Modal -->
-            <form method="POST" action="news/{{ $one_news->id }}" files=true enctype="multipart/form-data">
+            <form method="POST" action="offer_detail/{{ $one_offer_detail->id }}" files=true enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
-                <div class="modal fade" id="model-news-{{ $one_news->id }}" tabindex="" role="dialog"
+                <div class="modal fade" id="model-offer_detail-{{ $one_offer_detail->id }}" tabindex="" role="dialog"
                      aria-labelledby="myModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog">
@@ -103,18 +103,18 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="titel-{{ $one_news->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_news->id }}" name="title"
-                                           value="{{$one_news->title}}" maxlength="250" required>
+                                    <label for="titel-{{ $one_offer_detail->id }}">Titel:</label>
+                                    <input type="text" class="form-control" id="titel-{{ $one_offer_detail->id }}" name="title"
+                                           value="{{$one_offer_detail->title}}" maxlength="250" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
                                     <textarea class="form-control noresize" id="textblock" rows="10" required
-                                              name="content">{{$one_news->content}}</textarea>
+                                              name="content">{{$one_offer_detail->content}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.jpg" class="img-responsive"
+                                    <img src="files/offer_detail_{{ $one_offer_detail->id }}.jpg" class="img-responsive"
                                          alt="Kein Bild vorhanden"
                                          onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
@@ -125,9 +125,9 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}
-                                    von {{ $one_news->getUser->name }}</p>
+                                <p>Eintrag erstellt: {{ ($one_offer_detail->created_at->format('d.m.Y H:i:s')) }}<br>
+                                    Eintrag bearbeitet: {{ ($one_offer_detail->updated_at->format('d.m.Y H:i:s')) }}
+                                    von {{ $one_offer_detail->getUser->name }}</p>
                                 <button type="submit" class="btn btn-success">Speichern</button>
                             </div>
                         </div>
