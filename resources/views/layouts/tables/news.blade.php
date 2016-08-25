@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.png" class="img-responsive" alt="Kein Bild vorhanden" onerror="this.onerror=null;this.src='./files/placeholder.png';">
+                                    <img src="files/news_{{ $one_news->id }}.jpg" class="img-responsive" alt="Kein Bild vorhanden" onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
                                     <label for="file">Neues Bild hochladen:</label>

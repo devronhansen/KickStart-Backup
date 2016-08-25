@@ -12,7 +12,7 @@ function uploadPicture($file, $id, $category)
             $file->move("./files/temp", $file->getClientOriginalName());
             $image = Image::make('./files/temp/' . $file->getClientOriginalName());
             $image = resizePicture($image);
-            $image = $image->save('./files/' . $category . '_' . $id . '.png');
+            $image = $image->save('./files/' . $category . '_' . $id . '.jpg', 80);
             File::delete("./files/temp/" . $file->getClientOriginalName());
         } else {
             Session::flash('error', 'Beim Bildupload gab es einen Fehler!');
@@ -25,7 +25,7 @@ function uploadPicture($file, $id, $category)
 
 function deletePicture($id, $category)
 {
-    File::delete("./files/" . $category . "_" . $id . ".png");
+    File::delete("./files/" . $category . "_" . $id . ".jpg");
 }
 
 function resizePicture($image)
