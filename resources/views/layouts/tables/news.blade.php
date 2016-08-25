@@ -2,14 +2,16 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-news-0">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-news-0">
+            <span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer Eintrag
+        </button>
     </div>
     <!-- Modal -->
-    <div class="modal" id="model-news-0" tabindex="" role="dialog"
-         aria-labelledby="myModalLabel"
-         aria-hidden="true">
-        <form method="POST" action="news" id="create" files=true enctype="multipart/form-data">
-            {{ csrf_field() }}
+    <form method="POST" action="news" id="create" files=true enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="modal fade" id="model-news-0" tabindex="" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -29,6 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label class="btn btn-primary btn-file">
+                                <span class="glyphicon glyphicon-save"></span>
                                 Neues Bild hochladen <input type="file" name="file_0"
                                                             accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                             style="display: none;">
@@ -44,8 +47,8 @@
                 <!-- /.modal-content -->
             </div>
             <!-- /.modal-dialog -->
-        </form>
-    </div>
+        </div>
+    </form>
     <!-- /.modal -->
     <br>
     <table class="table table-hover {{--table-bordered--}}">
@@ -124,6 +127,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="btn btn-primary btn-file">
+                                        <span class="glyphicon glyphicon-save"></span>
                                         Neues Bild hochladen <input type="file" name="file_0"
                                                                     accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                                     style="display: none;">

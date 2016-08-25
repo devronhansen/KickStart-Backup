@@ -2,14 +2,17 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-person-0">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal"
+                data-target="#model-person-0"><span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer
+            Eintrag
+        </button>
     </div>
     <!-- Modal -->
-    <div class="modal" id="model-person-0" tabindex="" role="dialog"
-         aria-labelledby="myModalLabel"
-         aria-hidden="true">
-        <form method="POST" action="person" id="create" files=true enctype="multipart/form-data">
-            {{ csrf_field() }}
+    <form method="POST" action="person" id="create" files=true enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="modal fade" id="model-person-0" tabindex="" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -29,9 +32,11 @@
                         </div>
                         <div class="form-group">
                             <label class="btn btn-primary btn-file">
-                                Neues Bild hochladen <input type="file" name="file_0"
-                                                            accept=".bmp, .gif, .jpeg, .jpg, .png"
-                                                            style="display: none;">
+                                <span class="glyphicon glyphicon-save"></span>
+                                Neues Bild hochladen
+                                <input type="file" name="file_0"
+                                       accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                       style="display: none;">
                             </label>
                             <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                         </div>
@@ -44,8 +49,8 @@
                 <!-- /.modal-content -->
             </div>
             <!-- /.modal-dialog -->
-        </form>
-    </div>
+        </div>
+    </form>
     <!-- /.modal -->
     <br>
     <table class="table table-hover {{--table-bordered--}}">
@@ -108,7 +113,8 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="titel-{{ $one_person->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_person->id }}" name="title"
+                                    <input type="text" class="form-control" id="titel-{{ $one_person->id }}"
+                                           name="title"
                                            value="{{$one_person->title}}" maxlength="250" required>
                                 </div>
                                 <div class="form-group">
@@ -124,6 +130,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="btn btn-primary btn-file">
+                                        <span class="glyphicon glyphicon-save"></span>
                                         Neues Bild hochladen <input type="file" name="file_0"
                                                                     accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                                     style="display: none;">

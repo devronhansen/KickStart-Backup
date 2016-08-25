@@ -2,14 +2,17 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-offer_detail-0">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal"
+                data-target="#model-offer_detail-0"><span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer
+            Eintrag
+        </button>
     </div>
     <!-- Modal -->
-    <div class="modal" id="model-offer_detail-0" tabindex="" role="dialog"
-         aria-labelledby="myModalLabel"
-         aria-hidden="true">
-        <form method="POST" action="offer_detail" id="create" files=true enctype="multipart/form-data">
-            {{ csrf_field() }}
+    <form method="POST" action="offer_detail" id="create" files=true enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="modal fade" id="model-offer_detail-0" tabindex="" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -37,6 +40,7 @@
                         </div>
                         <div class="form-group">
                             <label class="btn btn-primary btn-file">
+                                <span class="glyphicon glyphicon-save"></span>
                                 Neues Bild hochladen <input type="file" name="file_0"
                                                             accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                             style="display: none;">
@@ -52,8 +56,8 @@
                 <!-- /.modal-content -->
             </div>
             <!-- /.modal-dialog -->
-        </form>
-    </div>
+        </div>
+    </form>
     <!-- /.modal -->
     <br>
     <table class="table table-hover {{--table-bordered--}}">
@@ -78,7 +82,8 @@
                             data-target="#delete-modal-offer_detail-{{ $one_offer_detail->id }}"><span
                                 class="glyphicon glyphicon-trash"></span>
                     </button>
-                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-offer_detail-{{ $one_offer_detail->id }}">
+                    <div class="modal fade" tabindex="-1" role="dialog"
+                         id="delete-modal-offer_detail-{{ $one_offer_detail->id }}">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -100,7 +105,8 @@
             </tr>
 
             <!-- Modal -->
-            <form method="POST" action="offer_detail/{{ $one_offer_detail->id }}" files=true enctype="multipart/form-data">
+            <form method="POST" action="offer_detail/{{ $one_offer_detail->id }}" files=true
+                  enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
                 <div class="modal fade" id="model-offer_detail-{{ $one_offer_detail->id }}" tabindex="" role="dialog"
@@ -116,7 +122,8 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="titel-{{ $one_offer_detail->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_offer_detail->id }}" name="title"
+                                    <input type="text" class="form-control" id="titel-{{ $one_offer_detail->id }}"
+                                           name="title"
                                            value="{{$one_offer_detail->title}}" maxlength="250" required>
                                 </div>
                                 <div class="form-group">
@@ -132,9 +139,9 @@
                                                 <option value="{{$one_offer->id}}" selected="selected">
                                             @else
                                                 <option value="{{$one_offer->id}}">
-                                            @endif
-                                            {{$one_offer->title}}</option>
-                                        @endforeach
+                                                    @endif
+                                                    {{$one_offer->title}}</option>
+                                                @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -145,6 +152,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="btn btn-primary btn-file">
+                                        <span class="glyphicon glyphicon-save"></span>
                                         Neues Bild hochladen <input type="file" name="file_0"
                                                                     accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                                     style="display: none;">
