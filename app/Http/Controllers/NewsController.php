@@ -46,7 +46,7 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
-        app('App\Http\Controllers\UploadController')->uploadPicture(Input::file('file_0'), $news->id, "news");
+        uploadPicture(Input::file('file_0'), $news->id, "news");
 
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
