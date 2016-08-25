@@ -106,6 +106,6 @@
 <!-- JavaScripts -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/flash.js"></script>
+<script src="/js/action.js"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
 <!-- Table News-->
-<div class="container col-md-12">
+<div class="container col-md-12" xmlns="http://www.w3.org/1999/html">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-0">Neuer Eintrag</button>
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-0">Neuer
+            Eintrag
+        </button>
     </div>
     <!-- Modal -->
     <div class="modal" id="model-0" tabindex="" role="dialog"
@@ -28,8 +30,12 @@
                                       name="content"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="file_0">Neues Bild hochladen:</label>
-                            <input type="file" id="file_0" name="file_0" accept=".bmp, .gif, .jpeg, .jpg, .png">
+                            <label class="btn btn-primary btn-file">
+                                Neues Bild hochladen <input type="file" name="file_0"
+                                                            accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                                            style="display: none;">
+                            </label>
+                            <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -119,8 +125,12 @@
                                          onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
                                 <div class="form-group">
-                                    <label for="file">Neues Bild hochladen:</label>
-                                    <input type="file" id="file" name="file" accept=".bmp, .gif, .jpeg, .jpg, .png">
+                                    <label class="btn btn-primary btn-file">
+                                        Neues Bild hochladen <input type="file" name="file"
+                                                                    accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                                                    style="display: none;">
+                                    </label>
+                                    <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                                 </div>
 
                             </div>
