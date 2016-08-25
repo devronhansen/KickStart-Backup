@@ -10,6 +10,7 @@ use App\News;
 use App\Offer;
 use App\OfferDetail;
 use App\Person;
+use App\Time;
 
 class TableController extends Controller
 {
@@ -24,11 +25,13 @@ class TableController extends Controller
         $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
         $offer = Offer::all()->sortBy('title');
         $person = Person::all()->sortBy('title');
+        $time = Time::all()->sortBy('title');
         return view('home', [
             "news" => $news,
             "offer_detail" => $offer_detail,
             "offer" => $offer,
             "person" => $person,
+            "time" => $time,
         ]);
     }
 }

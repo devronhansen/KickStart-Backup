@@ -1,15 +1,16 @@
-<!-- Table News-->
+<!-- Table time-->
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-news-0">
-            <span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer Eintrag
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal"
+                data-target="#model-time-0"><span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer
+            Eintrag
         </button>
     </div>
     <!-- Modal -->
-    <form method="POST" action="news" id="create" files=true enctype="multipart/form-data">
+    <form method="POST" action="time" id="create" files=true enctype="multipart/form-data">
         {{ csrf_field() }}
-        <div class="modal fade" id="model-news-0" tabindex="" role="dialog"
+        <div class="modal fade" id="model-time-0" tabindex="" role="dialog"
              aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog">
@@ -32,9 +33,10 @@
                         <div class="form-group">
                             <label class="btn btn-primary btn-file">
                                 <span class="glyphicon glyphicon-save"></span>
-                                Neues Bild hochladen <input type="file" name="file_0"
-                                                            accept=".bmp, .gif, .jpeg, .jpg, .png"
-                                                            style="display: none;">
+                                Neues Bild hochladen
+                                <input type="file" name="file_0"
+                                       accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                       style="display: none;">
                             </label>
                             <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                         </div>
@@ -60,20 +62,20 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($news as $one_news)
+        @foreach($time as $one_time)
             <!-- Tablerow -->
             <tr>
-                <td data-toggle="modal" data-target="#model-news-{{ $one_news->id }}"
-                    class="td-title"> {{ $one_news->title }} </td>
-                <td data-toggle="modal" data-target="#model-news-{{ $one_news->id }}"
-                    class="td-content"> {{ $one_news->content }} </td>
+                <td data-toggle="modal" data-target="#model-time-{{ $one_time->id }}"
+                    class="td-title"> {{ $one_time->title }} </td>
+                <td data-toggle="modal" data-target="#model-time-{{ $one_time->id }}"
+                    class="td-content"> {{ $one_time->content }} </td>
 
                 <td class="trash">
                     <button type="button" class="btn btn-error" data-toggle="modal"
-                            data-target="#delete-modal-news-{{ $one_news->id }}"><span
+                            data-target="#delete-modal-time-{{ $one_time->id }}"><span
                                 class="glyphicon glyphicon-trash"></span>
                     </button>
-                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-news-{{ $one_news->id }}">
+                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-time-{{ $one_time->id }}">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -82,7 +84,7 @@
                                     <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
                                 </div>
                                 <div class="modal-footer">
-                                    <form method="POST" action="news/{{ $one_news->id }}" id="delete">
+                                    <form method="POST" action="time/{{ $one_time->id }}" id="delete">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-danger">Eintrag löschen</button>
@@ -95,10 +97,10 @@
             </tr>
 
             <!-- Modal -->
-            <form method="POST" action="news/{{ $one_news->id }}" files=true enctype="multipart/form-data">
+            <form method="POST" action="time/{{ $one_time->id }}" files=true enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
-                <div class="modal fade" id="model-news-{{ $one_news->id }}" tabindex="" role="dialog"
+                <div class="modal fade" id="model-time-{{ $one_time->id }}" tabindex="" role="dialog"
                      aria-labelledby="myModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog">
@@ -110,18 +112,19 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="titel-{{ $one_news->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_news->id }}" name="title"
-                                           value="{{$one_news->title}}" maxlength="250" required>
+                                    <label for="titel-{{ $one_time->id }}">Titel:</label>
+                                    <input type="text" class="form-control" id="titel-{{ $one_time->id }}"
+                                           name="title"
+                                           value="{{$one_time->title}}" maxlength="250" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="textblock">Text:</label>
                                     <textarea class="form-control noresize" id="textblock" rows="10" required
-                                              name="content">{{$one_news->content}}</textarea>
+                                              name="content">{{$one_time->content}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="pic">Bild:</label>
-                                    <img src="files/news_{{ $one_news->id }}.jpg" class="img-responsive"
+                                    <img src="files/time_{{ $one_time->id }}.jpg" class="img-responsive"
                                          alt="Kein Bild vorhanden"
                                          onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
@@ -137,9 +140,9 @@
 
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt: {{ ($one_news->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_news->updated_at->format('d.m.Y H:i:s')) }}
-                                    von {{ $one_news->getUser->name }}</p>
+                                <p>Eintrag erstellt: {{ ($one_time->created_at->format('d.m.Y H:i:s')) }}<br>
+                                    Eintrag bearbeitet: {{ ($one_time->updated_at->format('d.m.Y H:i:s')) }}
+                                    von {{ $one_time->getUser->name }}</p>
                                 <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"
                                                                                  aria-hidden="true"></i>&ensp;Speichern
                                 </button>

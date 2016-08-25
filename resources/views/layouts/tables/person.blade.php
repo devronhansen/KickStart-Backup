@@ -131,9 +131,9 @@
                                 <div class="form-group">
                                     <label class="btn btn-primary btn-file">
                                         <span class="glyphicon glyphicon-save"></span>
-                                        Neues Bild hochladen <input type="file" name="file_0"
-                                                                    accept=".bmp, .gif, .jpeg, .jpg, .png"
-                                                                    style="display: none;">
+                                        &ensp; Neues Bild hochladen <input type="file" name="file_0"
+                                                                           accept=".bmp, .gif, .jpeg, .jpg, .png"
+                                                                           style="display: none;">
                                     </label>
                                     <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                                 </div>
@@ -143,7 +143,9 @@
                                 <p>Eintrag erstellt: {{ ($one_person->created_at->format('d.m.Y H:i:s')) }}<br>
                                     Eintrag bearbeitet: {{ ($one_person->updated_at->format('d.m.Y H:i:s')) }}
                                     von {{ $one_person->getUser->name }}</p>
-                                <button type="submit" class="btn btn-success">Speichern</button>
+                                <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"
+                                                                                 aria-hidden="true"></i>&ensp;Speichern
+                                </button>
                             </div>
                         </div>
                         <!-- /.modal-content -->

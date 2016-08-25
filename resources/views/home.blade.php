@@ -8,6 +8,7 @@
                     <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
                     <li><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
+                    <li><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
                 </ul>
                 <div class="tab-content">
 
@@ -23,9 +24,13 @@
                         @include('layouts.tables.person')
                     </div>
 
+                    <div id="time" class="tab-pane fade">
+                        @include('layouts.tables.time')
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 @endsection
