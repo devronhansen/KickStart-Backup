@@ -155,7 +155,7 @@
                                 <div class="form-group">
                                     <label class="btn btn-primary btn-file">
                                         <span class="glyphicon glyphicon-save"></span>
-                                        &ensp; Neues Bild hochladen <input type="file" name="file_0"
+                                        &ensp; Neues Bild hochladen <input type="file" name="file"
                                                                            accept=".bmp, .gif, .jpeg, .jpg, .png"
                                                                            style="display: none;">
                                     </label>
