@@ -30,14 +30,15 @@
 			nav_label_prev : 'Prev',
 			nav_label_next : 'Next',
 			nav_label_last : 'Last',
+			nav_show_dots : true,
 			nav_order : ["first", "prev", "num", "next", "last"],
 			nav_label_info : 'Showing {0}-{1} of {2} results',
-            show_first_last: false,
+            show_first_last: true,
             abort_on_small_lists: false,
             jquery_ui: true,
             jquery_ui_active: "ui-state-highlight",
             jquery_ui_default: "ui-state-default",
-            jquery_ui_disabled: "ui-state-disabled"
+            jquery_ui_disabled: "ui-state-disabled",
 		};
 		var options = $.extend(defaults,options);
 		var $item_container;
@@ -92,13 +93,19 @@
 					navigation_html += '<a class="previous_link '+ jquery_ui_default_class +'" href="">'+ options.nav_label_prev +'</a>';
 					break;
 				case "num":
-					navigation_html += less;
+					if(options.nav_show_dots)
+					{
+						navigation_html += less;
+					}
 					var current_link = 0;
 					while(number_of_pages > current_link){
 						navigation_html += '<a class="page_link '+ jquery_ui_default_class +'" href="" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
 						current_link++;
 					}
-					navigation_html += more;
+					if(options.nav_show_dots)
+					{
+						navigation_html += more;
+					}
 					break;
 				default:
 					break;

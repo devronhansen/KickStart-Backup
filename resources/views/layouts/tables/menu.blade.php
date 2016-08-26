@@ -4,12 +4,23 @@
     <script src="/js/jquery.pajinate.js"></script>
     <script type="text/javascript">
 			$(document).ready(function(){
-				$('#paging_container1').pajinate();
+				$('#paging_container1').pajinate(
+          {
+            nav_label_first : '<<',
+			nav_label_last : '>>',
+			nav_label_prev : '<',
+			nav_label_next : '>',
+            nav_show_dots : false,
+            start_page : 3,
+            num_page_links_to_display : 0,
+            show_first_last: false,
+          }
+        );
 			});
     </script>
     <div id="wrapper">
       <div id="paging_container1" class="container col-md-12">
-		<div class="pajinate_page_navigation"></div>
+		<div class="pajinate_page_navigation container col-md-12 text-center"></div>
 
 		<ul class="pajinate_content">
           @for ($i = 1; $i < 8 * 24; $i++)

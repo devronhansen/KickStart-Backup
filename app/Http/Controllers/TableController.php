@@ -22,13 +22,15 @@ class TableController extends Controller
 
     public function index()
     {
+        $monday = strtotime('monday this week');
+        $startweek = $monday - (604800 * 3);
+
         $news = News::all()->sortByDesc('updated_at');
         $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
         $offer = Offer::all()->sortBy('title');
         $person = Person::all()->sortBy('title');
         $time = Time::all()->sortBy('title');
-        $menu = Menu::all()->sortBy('date')->keyBy('date');;
-        $today = strtotime('monday this week');
+        $menu = Menu::all()->sortBy('date')->keyBy('date');
 
         return view('home', [
             "news" => $news,
@@ -37,7 +39,7 @@ class TableController extends Controller
             "person" => $person,
             "time" => $time,
             "menu" => $menu,
-            "today" => $today,
+            "today" => $startweek,
         ]);
     }
 }
