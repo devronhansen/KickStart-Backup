@@ -12,7 +12,7 @@ class MenuController extends Controller
 {
     public function index()
     {
-        return $menu = Time::all()->sortByDesc('updated_at');
+        return $menu = Menu::all()->sortBy('date');
         //return $menu = Menu::all()->sortByDesc('updated_at');
     }
 

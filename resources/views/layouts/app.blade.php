@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/googlefont-lato.css">
     <!-- Styles -->
+    <link rel="stylesheet" href="css/pajinate.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="/css/style.css">
+    <!-- JavaScripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/action.js"></script>
 
     <style>
         body {
@@ -101,9 +106,5 @@
     </div>
 @endif
 
-<!-- JavaScripts -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/action.js"></script>
 </body>
 </html>

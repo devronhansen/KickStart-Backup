@@ -1,66 +1,97 @@
 <!-- Table News-->
 <div class="container col-md-12">
     <br>
-    <table class="table table-hover {{--table-bordered--}}">
-        <thead>
-        <tr>
-            <th class="col-md-2">NACH LINKS</th>
-            <th>AKTUELLE WOCHE: (WOCHE) --- NACH RECHTS</th>
-        </tr>
-        </thead>
-        <tbody>
-        @for ($i = 1; $i < 8; $i++)
-            <!-- Tablerow -->
-            <tr>
-                {{-- data-toggle abhaengig, ob id vorhanden und so fuer patch / create --}}
-                <td><strong>
-                    @if ($i == 1)
-                        Montag
-                    @elseif ($i == 2)
-                        Dienstag
-                    @elseif ($i == 3)
-                        Mittwoch
-                    @elseif ($i == 4)
-                        Donnerstag
-                    @elseif ($i == 5)
-                        Freitag
-                    @elseif ($i == 6)
-                        Samstag
-                    @elseif ($i == 7)
-                        Sonntag
+    <script src="/js/jquery.pajinate.js"></script>
+    <script type="text/javascript">
+			$(document).ready(function(){
+				$('#paging_container1').pajinate();
+			});
+    </script>
+    <div id="wrapper">
+      <div id="paging_container1" class="container col-md-12">
+		<div class="pajinate_page_navigation"></div>
+
+		<ul class="pajinate_content">
+          @for ($i = 1; $i < 8 * 24; $i++)
+          {{--*/ $date = date("d.m.Y",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
+          {{--*/ $date_long = date("Y-m-d H:i:s",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
+					 <li>
+             <p>
+               <strong>
+                 @if ($i % 7 == 1)
+                     Montag
+                 @elseif ($i % 7 == 2)
+                     Dienstag
+                 @elseif ($i % 7 == 3)
+                     Mittwoch
+                 @elseif ($i % 7 == 4)
+                     Donnerstag
+                 @elseif ($i % 7 == 5)
+                     Freitag
+                 @elseif ($i % 7 == 6)
+                     Samstag
+                 @elseif ($i % 7 == 0)
+                     Sonntag
+                 @else
+                     Hier ist was falsch gelaufen...
+                 @endif
+                 , der {{ $date }}
+              </strong>
+            </p>
+                <table class="table">
+                    <col style="width:150px">
+                    <col style="width:*">
+                    @if (isset($menu[$date_long]))
+                    <tbody>
+                        <tr>
+                            <td>Vollkost</td>
+                            <td>{{$menu[$date_long]->vollkost}}</td>
+                        </tr>
+                        <tr>
+                            <td>Vegetarisch</td>
+                            <td>{{$menu[$date_long]->vegetarisch}}</td>
+                        </tr>
+                        <tr>
+                            <td>Fitness</td>
+                            <td>{{$menu[$date_long]->fitness}}</td>
+                        </tr>
+                        <tr>
+                            <td>Nachspeise</td>
+                            <td>{{$menu[$date_long]->nachtisch}}</td>
+                        </tr>
+                    </tbody>
                     @else
-                        Hier ist was falsch gelaufen...
+                    <tbody>
+                        <tr>
+                            <td>Vollkost</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Vegetarisch</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Fitness</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Nachspeise</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
                     @endif
-                </strong></td>
-                <td> {{ date("Y-m-d",$today + (86400 * ($i - 1)) + (604800 * 1) ) }} </td>
-            </tr>
+                </table>
+                <hr>
+          </li>
+
+          @endfor
+    		</ul>
+    	</div>
+    </div>
+
             <tr data-toggle="modal" data-target="#model-menu-{{$i}}" class="td-title">
-                <td colspan="2">
-                    <!-- Tabelle in der Tabelle -->
-                    <table class="table transparentbackground">
-                        <tbody>
-                            <tr>
-                                <td>Vollkost</td>
-                                <td>VOLLKOSTWERT</td>
-                            </tr>
-                            <tr>
-                                <td>Vegetarisch</td>
-                                <td>VEGETARISCHER WERT</td>
-                            </tr>
-                            <tr>
-                                <td>Fitness</td>
-                                <td>FITNESSNAHRUNG</td>
-                            </tr>
-                            <tr>
-                                <td>Nachspeise</td>
-                                <td>VOLLKOSTWERT</td>
-                            </tr>
-                        </tbody>
-                    </table>
-<!-- 2 Modals, 1 fuer Patch, 1 fuer Create oder so -->
-                </td>
-            </tr>
-        @endfor
-        </tbody>
-    </table>
+
+    <marquee scrollamount="15" scrolldelay="1">
+  <p><img src="http://static.tumblr.com/68d74ad72b013652f1b0511b4bb5d8b6/s61rejd/I22mp7fci/tumblr_static_jesus.gif" alt="Jebus"></p>
+</marquee>
 </div>

@@ -11,6 +11,7 @@ use App\Offer;
 use App\OfferDetail;
 use App\Person;
 use App\Time;
+use App\Menu;
 
 class TableController extends Controller
 {
@@ -26,7 +27,7 @@ class TableController extends Controller
         $offer = Offer::all()->sortBy('title');
         $person = Person::all()->sortBy('title');
         $time = Time::all()->sortBy('title');
-        $menu = "1";
+        $menu = Menu::all()->sortBy('date')->keyBy('date');;
         $today = strtotime('monday this week');
 
         return view('home', [
