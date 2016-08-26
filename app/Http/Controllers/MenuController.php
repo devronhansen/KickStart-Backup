@@ -19,14 +19,9 @@ class MenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         $this->validate($request, array(
-            'title' => 'required|max:255',
-            'content' => 'required'
+            'vollkost' => 'required'
         ));
-
-        $menu->edited_by = Auth::User()->id;
         $menu->update($request->all());
-
-        uploadPicture(Input::file('file'), $menu->id, "Menu");
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
@@ -36,18 +31,16 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-            'title' => 'required|max:255',
-            'content' => 'required'
+            'vollkost' => 'required'
         ));
 
         $menu = new Menu;
-        $menu->title = $request->title;
-        $menu->content = $request->content;
-        $menu->edited_by = Auth::User()->id;
+        $menu->date = $request->date;
+        $menu->vollkost = $request->vollkost;
+        $menu->vegetarisch = $request->vegetarisch;
+        $menu->fitness = $request->fitness;
+        $menu->nachtisch = $request->nachtisch;
         $menu->save();
-
-        uploadPicture(Input::file('file_0'), $menu->id, "Menu");
-
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#menu');
@@ -56,7 +49,6 @@ class MenuController extends Controller
 
     public function destroy(Menu $menu)
     {
-        deletePicture($menu->id, "Menu");
         $menu->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return redirect('/#menu');

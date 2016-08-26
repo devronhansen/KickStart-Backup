@@ -49,11 +49,11 @@
                  , der {{ $date }}
               </strong>
             </p>
-                <table class="table">
+                <table class="table table-body-hover">
                     <col style="width:150px">
                     <col style="width:*">
                     @if (isset($menu[$date_long]))
-                    <tbody>
+                    <tbody data-toggle="modal" data-id="{{$date_long}}" data-target="#editModal">
                         <tr>
                             <td>Vollkost</td>
                             <td>{{$menu[$date_long]->vollkost}}</td>
@@ -100,9 +100,36 @@
     	</div>
     </div>
 
-            <tr data-toggle="modal" data-target="#model-menu-{{$i}}" class="td-title">
-
     <marquee scrollamount="15" scrolldelay="1">
   <p><img src="http://static.tumblr.com/68d74ad72b013652f1b0511b4bb5d8b6/s61rejd/I22mp7fci/tumblr_static_jesus.gif" alt="Jebus"></p>
 </marquee>
+<script type="text/javascript">
+    $(function(){
+        $('#editModal').modal({
+            keyboard: true,
+            backdrop: "static",
+            show:false,
+
+        }).on('show', function(){
+              var getIdFromRow = $(event.target).closest('tr').data('Vollkost');
+            //make your ajax call populate items or what even you need
+            $(this).find('#orderDetails').html($('<b> Order Id selected: ' + getIdFromRow  + '</b>'))
+        });
+    });
+    </script>
+
+    <!-- EditFormal -->
+    <div id="editModal" class="modal hide fade" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+             <h3>Order</h3>
+
+        </div>
+        <div id="orderDetails" class="modal-body"></div>
+        <div id="orderItems" class="modal-body"></div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
 </div>
