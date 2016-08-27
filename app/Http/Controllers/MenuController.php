@@ -12,7 +12,7 @@ class MenuController extends Controller
 {
     public function index()
     {
-        return $menu = Menu::all()->sortBy('date');
+        return $menu = Menu::all();
         //return $menu = Menu::all()->sortByDesc('updated_at');
     }
 
@@ -22,7 +22,6 @@ class MenuController extends Controller
             'vollkost' => 'required'
         ));
         $menu->update($request->all());
-
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
         return redirect('/#menu');
@@ -35,13 +34,15 @@ class MenuController extends Controller
         ));
 
         $menu = new Menu;
-        $menu->date = $request->date;
+        /*$menu->date = $request->date;*/
         $menu->vollkost = $request->vollkost;
         $menu->vegetarisch = $request->vegetarisch;
         $menu->fitness = $request->fitness;
         $menu->nachtisch = $request->nachtisch;
+        /* $menu->save();*/
+        $menu->date = $request->date;
+        /*dd($menu);*/
         $menu->save();
-
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#menu');
 

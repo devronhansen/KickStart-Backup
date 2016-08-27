@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>KickStart CMS</title>
-
     <!-- Fonts -->
     <link rel="shortcut icon" href="{{ asset('icon.png') }}">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/googlefont-lato.css">
     <!-- Styles -->
-    <link rel="stylesheet" href="css/pajinate.css" />
+    <link rel="stylesheet" href="css/pajinate.css"/>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="/css/style.css">
