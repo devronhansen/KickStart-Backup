@@ -30,23 +30,23 @@
                     <p>
                         <strong>
                             @if ($i % 7 == 1)
-                            Montag
+                            Montag,
                             @elseif ($i % 7 == 2)
-                            Dienstag
+                            Dienstag,
                             @elseif ($i % 7 == 3)
-                            Mittwoch
+                            Mittwoch,
                             @elseif ($i % 7 == 4)
-                            Donnerstag
+                            Donnerstag,
                             @elseif ($i % 7 == 5)
-                            Freitag
+                            Freitag,
                             @elseif ($i % 7 == 6)
-                            Samstag
+                            Samstag,
                             @elseif ($i % 7 == 0)
-                            Sonntag
+                            Sonntag,
                             @else
                             Hier ist was falsch gelaufen...
                             @endif
-                            , der {{ $date }}
+                            der {{ $date }}
                         </strong>
                     </p>
                     <table class="table table-body-hover table-bordered">

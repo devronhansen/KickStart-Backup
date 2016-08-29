@@ -17,7 +17,7 @@ $(document).ready(function () {
                 });
                 document.getElementById("vegetarisch-input").value = day_array.map(function (day_array) {
                     return day_array['vegetarisch'];
-                }); 
+                });
                 document.getElementById("fitness-input").value = day_array.map(function (day_array) {
                     return day_array['fitness'];
                 });
@@ -35,10 +35,6 @@ $(document).ready(function () {
         $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
     }
 
-// Change hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
-        window.location.hash = e.target.hash;
-    })
 })
 ;
 $(document).on('change', ':file', function () {
