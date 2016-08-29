@@ -35,6 +35,12 @@ $(document).ready(function () {
         $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
     }
 
+// Change hash for page-reload
+    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+        var scrollmem = $('html,body').scrollTop(); //get top location
+        window.location.hash = e.target.hash; //switch page
+        $('html,body').scrollTop(scrollmem); //scroll to top
+    })
 })
 ;
 $(document).on('change', ':file', function () {
