@@ -3,7 +3,6 @@ $(document).ready(function () {
     $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
     $('.tbody').on('click', function () {
         var tbody_clicked_id = $(this).attr("id");
-        console.log(tbody_clicked_id);
         document.getElementById("date_hidden").value = tbody_clicked_id;
         $.ajax({
             url: '/menu',
@@ -18,7 +17,7 @@ $(document).ready(function () {
                 });
                 document.getElementById("vegetarisch-input").value = day_array.map(function (day_array) {
                     return day_array['vegetarisch'];
-                });
+                }); 
                 document.getElementById("fitness-input").value = day_array.map(function (day_array) {
                     return day_array['fitness'];
                 });
