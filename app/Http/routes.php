@@ -20,7 +20,7 @@ Route::get('offer', 'OfferController@index');
 
 
 //Offer_Detail
-Route::get('offer_detail', 'OfferDetailController@index');
+Route::get('offer_detail/{id}', 'OfferDetailController@index');
 Route::post('offer_detail', 'OfferDetailController@store');
 Route::patch('offer_detail/{offer_detail}', 'OfferDetailController@update');
 Route::delete('offer_detail/{offer_detail}', 'OfferDetailController@destroy');
@@ -35,7 +35,6 @@ Route::delete('person/{person}', 'PersonController@destroy');
 Route::get('time', 'TimeController@index');
 Route::post('time', 'TimeController@store');
 Route::patch('time/{time}', 'TimeController@update');
-Route::delete('time/{time}', 'TimeController@destroy');
 
 //Speiseplan/Menu
 Route::get('menu', 'MenuController@index');

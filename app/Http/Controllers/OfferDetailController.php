@@ -10,9 +10,11 @@ use Illuminate\Support\Facades\Input;
 
 class OfferDetailController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        return OfferDetail::all()->sortBy('updated_at');
+        return OfferDetail::where('offerid', $id)
+            ->orderBy('updated_at', 'desc')
+            ->get();
     }
 
     public function update(Request $request, OfferDetail $offer_detail)
@@ -23,7 +25,7 @@ class OfferDetailController extends Controller
         ));
 
         $offer_detail->edited_by = Auth::User()->id;
-        $offer_detail->offerid = $request->offer;
+        $offer_detail->offerid = $request->input('offer');
         $offer_detail->update($request->all());
 
         uploadPicture(Input::file('file'), $offer_detail->id, "offer_detail");
@@ -42,7 +44,7 @@ class OfferDetailController extends Controller
 
         $offer_detail = new OfferDetail;
         $offer_detail->title = $request->title;
-        $offer_detail->content = $request->content;
+        $offer_detail->content = $request->input('content');
         $offer_detail->edited_by = Auth::User()->id;
         $offer_detail->offerid = $request->offer;
         $offer_detail->save();
