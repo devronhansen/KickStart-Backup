@@ -26,8 +26,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="28">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,11 +36,21 @@
       <file leaf-file-name="OfferDetailController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OfferDetailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+            <state relative-caret-position="532">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_08_22_123430_create_offers_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_22_123430_create_offers_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,8 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,6 +288,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +297,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="offer&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/OfferDetailController.php&#10;route&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;ht&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/.htaccess&#10;app&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/app.blade.php&#10;men&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/tables/menu.blade.php&#10;time&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/tables/time.blade.php&#10;acti&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/js/action.js&#10;routes&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;index.p&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/index.php&#10;st&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/public/css/style.css&#10;tablec&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/Controllers/TableController.php&#10;news&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/Controllers/NewsController.php&#10;newsc&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/Controllers/NewsController.php&#10;cre&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/database/migrations/2016_08_25_153639_create_menus_table.php&#10;create&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/database/migrations/2016_08_25_153639_create_menus_table.php&#10;app.bl&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/resources/views/layouts/app.blade.php&#10;ta&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/vendor/laravel/framework/src/Illuminate/Queue/Console/TableCommand.php&#10;crea&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_143003_create_time_table.php&#10;perso&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Person.php&#10;offerdet&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/OfferDetailController.php&#10;per&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/PersonController.php&#10;create_me&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_104124_create_menu_table.php&#10;offerdeta&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/OfferDetail.php&#10;person.&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Person.php&#10;create_per&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_104152_create_person_table.php&#10;Men&#9;null&#9;null&#10;tab&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;uplo&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/UploadController.php&#10;offer_&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_24_154500_create_offerdetails_table.php&#10;upload&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/UploadController.php&#10;offerde&#9;null&#9;null&#10;offer_de&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/Offer_DetailController.php&#10;offerC&#9;null&#9;null&#10;news.&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/resources/views/layouts/tables/news.blade.php&#10;flash&#9;null&#9;null&#10;rout&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/routes.php&#10;Ta&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;wel&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/welcome.blade.php&#10;tablecon&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;routeas&#9;null&#9;null&#10;create_&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_22_091323_create_news_table.php&#10;r&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;home&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/home.blade.php&#10;tablecontr&#9;null&#9;null&#10;tabl&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;table&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php" />
+    <property name="SearchEverywhereHistoryKey" value="offer&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/OfferDetailController.php&#10;create_o&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_22_123430_create_offers_table.php&#10;tablec&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;route&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;ht&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/.htaccess&#10;app&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/app.blade.php&#10;men&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/tables/menu.blade.php&#10;time&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/layouts/tables/time.blade.php&#10;acti&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/js/action.js&#10;routes&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;index.p&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/public/index.php&#10;st&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/public/css/style.css&#10;news&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/Controllers/NewsController.php&#10;newsc&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/Controllers/NewsController.php&#10;cre&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/database/migrations/2016_08_25_153639_create_menus_table.php&#10;create&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/database/migrations/2016_08_25_153639_create_menus_table.php&#10;app.bl&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/resources/views/layouts/app.blade.php&#10;ta&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/vendor/laravel/framework/src/Illuminate/Queue/Console/TableCommand.php&#10;crea&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_143003_create_time_table.php&#10;perso&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Person.php&#10;offerdet&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/OfferDetailController.php&#10;per&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/PersonController.php&#10;create_me&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_104124_create_menu_table.php&#10;offerdeta&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/OfferDetail.php&#10;person.&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Person.php&#10;create_per&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_25_104152_create_person_table.php&#10;Men&#9;null&#9;null&#10;tab&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;uplo&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/UploadController.php&#10;offer_&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_24_154500_create_offerdetails_table.php&#10;upload&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/UploadController.php&#10;offerde&#9;null&#9;null&#10;offer_de&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/Offer_DetailController.php&#10;offerC&#9;null&#9;null&#10;news.&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/resources/views/layouts/tables/news.blade.php&#10;flash&#9;null&#9;null&#10;rout&#9;FILE&#9;file://C:/Users/Ron/Code/KickStart_CMS/app/Http/routes.php&#10;Ta&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;wel&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/welcome.blade.php&#10;tablecon&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;routeas&#9;null&#9;null&#10;create_&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/database/migrations/2016_08_22_091323_create_news_table.php&#10;r&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/routes.php&#10;home&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/resources/views/home.blade.php&#10;tablecontr&#9;null&#9;null&#10;tabl&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php&#10;table&#9;FILE&#9;file://C:/Users/rohansen/Projects/Laravel/KickStart_CMS/app/Http/Controllers/TableController.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
@@ -388,7 +398,9 @@
       <workItem from="1473081813876" duration="29000" />
       <workItem from="1473161213055" duration="1645000" />
       <workItem from="1473163247762" duration="1977000" />
-      <workItem from="1473168678326" duration="109000" />
+      <workItem from="1473168678326" duration="1512000" />
+      <workItem from="1473228574750" duration="18000" />
+      <workItem from="1473237793968" duration="1294000" />
     </task>
     <task id="LOCAL-00001" summary="Tabelle news jetzt ohne Picture">
       <created>1472028976415</created>
@@ -502,11 +514,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473168753980</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Anpassung an App">
+      <created>1473168815843</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1473168815843</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139357000" />
+    <option name="totallyTimeSpent" value="142072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -595,13 +614,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_22_091323_create_news_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -652,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,18 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TableController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_25_143003_create_times_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,18 +912,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="28">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_22_123430_create_offers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OfferDetailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+        <state relative-caret-position="532">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
