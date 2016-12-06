@@ -1,12 +1,10 @@
 <?php
 
-
 Route::auth();
 
 //All Tables
 Route::get('/home', 'TableController@index');
 Route::get('/', 'TableController@index');
-
 
 //News
 Route::get('news', 'NewsController@index');
@@ -14,10 +12,8 @@ Route::post('news', 'NewsController@store');
 Route::patch('news/{news}', 'NewsController@update');
 Route::delete('news/{news}', 'NewsController@destroy');
 
-
 //Offer
 Route::get('offer', 'OfferController@index');
-
 
 //Offer_Detail
 Route::get('offer_detail/{id}', 'OfferDetailController@index');
@@ -41,3 +37,6 @@ Route::get('menu', 'MenuController@index');
 Route::post('menu', 'MenuController@store');
 Route::patch('menu/{menu}', 'MenuController@update');
 Route::delete('menu/{menu}', 'MenuController@destroy');
+
+//Gallery
+Route::get('gallery', 'GalleryController@index');

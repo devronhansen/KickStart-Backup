@@ -5,7 +5,6 @@ $(document).ready(function () {
         tbody_clicked_id = $(this).attr("id");
         document.getElementById("date_hidden").value = tbody_clicked_id;
         loadData();
-        Interval = setInterval(loadData, 10000);
 
         function loadData() {
             $.ajax({

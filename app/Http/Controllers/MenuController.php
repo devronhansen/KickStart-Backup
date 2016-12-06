@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Menu;
 use Illuminate\Support\Facades\Auth;
+use phpDocumentor\Reflection\Types\Array_;
 use Session;
 use Illuminate\Support\Facades\Input;
 
@@ -12,8 +13,15 @@ class MenuController extends Controller
 {
     public function index()
     {
-        return $menu = Menu::all();
-        //return $menu = Menu::all()->sortByDesc('updated_at');
+        /*$menu = Menu::all();
+        $Woche = array();
+        foreach ($menu as $one_menu) {
+            if (date("W") == date("W", strtotime($one_menu->date)))
+                array_push($Woche, $one_menu);
+        }
+
+        return $Woche;*/
+        return Menu::all();
     }
 
     public function update(Request $request, Menu $menu)
@@ -45,7 +53,6 @@ class MenuController extends Controller
         $menu->save();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#menu');
-
     }
 
     public function destroy(Menu $menu)
