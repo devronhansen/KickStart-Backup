@@ -44,6 +44,6 @@ class GalleryController extends Controller
         $image = $request->input('id');
         Gallery::where('image', $image)->first()->delete();
         File::delete("./files/gallery/" . $image);
-        return response(200);
+        return "test";
     }
 }

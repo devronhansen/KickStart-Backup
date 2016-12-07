@@ -10,11 +10,21 @@
           id="my-awesome-dropzone" name="file">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
     </form>
+	
+	<script>
+	$(document).ready(function () {
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+	});
+</script>
     <script>
 
         Dropzone.autoDiscover = false;
-
+		var CSRF_TOKEN = $('input[name="_token"]').attr('content'); 
 
         var myDropzone = new Dropzone("#my-awesome-dropzone", {
             url: "gallery",
@@ -23,17 +33,14 @@
 
             init: function () {
 
-                this.on("removedfile", function (file) {
+               this.on("removedfile", function (file) {
                     var name = file.name;
-                    console.log(name);
                     $.ajax({
                         type: 'POST',
-                        url: 'gallery/delete/',
+                        url: 'gallery/delete',
                         data: "id=" + name,
                         success: function (data) {
-                            if (data === 200) {
-                                console.log('nice')
-                            }
+                                console.log('deleted')      
                         }
 
                     });
