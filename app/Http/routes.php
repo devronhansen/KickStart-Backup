@@ -40,3 +40,5 @@ Route::delete('menu/{menu}', 'MenuController@destroy');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
+Route::post('gallery', 'GalleryController@postUpload');
+Route::post('gallery/delete', 'GalleryController@postDestroy');

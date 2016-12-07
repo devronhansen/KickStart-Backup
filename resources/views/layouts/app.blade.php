@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>KickStart CMS</title>
+    <title>KickStart</title>
     <!-- Fonts -->
     <link rel="shortcut icon" href="{{ asset('icon.png') }}">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -46,7 +46,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                KickStart CMS
+                KickStart
             </a>
         </div>
 

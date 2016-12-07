@@ -17,10 +17,7 @@ function uploadPicture($file, $id, $category)
         } else {
             Session::flash('error', 'Beim Bildupload gab es einen Fehler!');
         }
-
     }
-
-
 }
 
 function deletePicture($id, $category)
