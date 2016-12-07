@@ -12,7 +12,8 @@ class TimeController extends Controller
 {
     public function index()
     {
-        return $time = Time::all()->sortByDesc('updated_at');
+        return $time = Time::orderBy('updated_at', 'desc')
+            ->get();
     }
 
     public function update(Request $request, Time $time)

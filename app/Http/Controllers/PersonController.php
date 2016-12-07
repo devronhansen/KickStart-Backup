@@ -12,7 +12,8 @@ class PersonController extends Controller
 {
     public function index()
     {
-        return $person = Person::all()->sortByDesc('updated_at');
+        return $person = Person::orderBy('updated_at', 'desc')
+            ->get();
     }
 
     public function update(Request $request, Person $person)

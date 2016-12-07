@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Menu;
 use Illuminate\Support\Facades\Auth;
-use phpDocumentor\Reflection\Types\Array_;
 use Session;
 use Illuminate\Support\Facades\Input;
 
@@ -13,15 +12,14 @@ class MenuController extends Controller
 {
     public function index()
     {
-        /*$menu = Menu::all();
+    	$menu = Menu::all();
         $Woche = array();
         foreach ($menu as $one_menu) {
             if (date("W") == date("W", strtotime($one_menu->date)))
                 array_push($Woche, $one_menu);
         }
 
-        return $Woche;*/
-        return Menu::all();
+        return $Woche;
     }
 
     public function update(Request $request, Menu $menu)
@@ -53,6 +51,7 @@ class MenuController extends Controller
         $menu->save();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#menu');
+
     }
 
     public function destroy(Menu $menu)
@@ -61,4 +60,11 @@ class MenuController extends Controller
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return redirect('/#menu');
     }
+
+    public function giveAll()
+    {
+    	return Menu::all();
+    }
+
+
 }

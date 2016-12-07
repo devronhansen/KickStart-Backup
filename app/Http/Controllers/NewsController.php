@@ -13,7 +13,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        return $news = News::all()->sortByDesc('updated_at');
+        return $news = News::orderBy('updated_at', 'desc')->get();
     }
 
     public function update(Request $request, News $news)

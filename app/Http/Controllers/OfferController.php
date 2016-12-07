@@ -8,6 +8,6 @@ class OfferController extends Controller
 {
     public function index()
     {
-        return Offer::all()->sortBy("title");
+        return Offer::all();
     }
 }
