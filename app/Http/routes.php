@@ -31,6 +31,7 @@ Route::delete('person/{person}', 'PersonController@destroy');
 Route::get('time', 'TimeController@index');
 Route::post('time', 'TimeController@store');
 Route::patch('time/{time}', 'TimeController@update');
+Route::delete('time/{time}', 'TimeController@destroy');
 
 //Speiseplan/Menu
 Route::get('menu', 'MenuController@index');

@@ -34,19 +34,20 @@ class TableController extends Controller
         $time = Time::all()->sortBy('title');
         $menu = Menu::all()->sortBy('date')->keyBy('date');
 
-        if (Gate::allows('see-news')) {
-            $activetab = "news";
-        } else if (Gate::allows('see-offer_detail')) {
-            $activetab = "offer_detail";
-        } else if (Gate::allows('see-person')) {
-            $activetab = "person";
-        } else if (Gate::allows('see-time')) {
-            $activetab = "time";
-        } else if (Gate::allows('see-menu')) {
-            $activetab = "menu";
-        };
-
-
+        // if (Gate::allows('see-news')) {
+            // $activetab = "news";
+        // } else if (Gate::allows('see-offer_detail')) {
+            // $activetab = "offer_detail";
+        // } else if (Gate::allows('see-person')) {
+            // $activetab = "person";
+        // } else if (Gate::allows('see-time')) {
+            // $activetab = "time";
+        // } else if (Gate::allows('see-menu')) {
+            // $activetab = "menu";
+        // };
+		
+		$activetab="news";
+		
         return view('home', [
             "news" => $news,
             "offer_detail" => $offer_detail,

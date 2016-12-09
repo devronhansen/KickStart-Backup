@@ -5,45 +5,37 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <ul class="nav nav-tabs">
-                    @can('see-news')
                     @if ($activetab == "news")
                     <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     @else
                     <li><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     @endif
-                    @endcan
 
-                    @can('see-offer_detail')
                     @if ($activetab == "offer_detail")
                     <li class="active"><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
                     @else
                     <li><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
                     @endif
-                    @endcan
 
-                    @can('see-person')
                     @if ($activetab == "person")
                     <li class="active"><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
                     @else
                     <li><a data-toggle="tab" href="#person">Ansprechpartner</a></li>
                     @endif
-                    @endcan
 
-                    @can('see-time')
                     @if ($activetab == "time")
                     <li class="active"><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
                     @else
                     <li><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
                     @endif
-                    @endcan
 
-                    @can('see-menu')
+                    
                     @if ($activetab == "menu")
                     <li class="active"><a data-toggle="tab" href="#menu">Speiseplan</a></li>
                     @else
                     <li><a data-toggle="tab" href="#menu">Speiseplan</a></li>
                     @endif
-                    @endcan
+                    
 
                     @if ($activetab == "gallery")
                        <li class="active"><a data-toggle="tab" href="#gallery">Gallerie</a></li>
