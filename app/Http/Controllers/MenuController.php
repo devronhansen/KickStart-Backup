@@ -40,14 +40,11 @@ class MenuController extends Controller
         ));
 
         $menu = new Menu;
-        /*$menu->date = $request->date;*/
         $menu->vollkost = $request->vollkost;
         $menu->vegetarisch = $request->vegetarisch;
         $menu->fitness = $request->fitness;
         $menu->nachtisch = $request->nachtisch;
-        /* $menu->save();*/
         $menu->date = $request->date;
-        /*dd($menu);*/
         $menu->save();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#menu');
