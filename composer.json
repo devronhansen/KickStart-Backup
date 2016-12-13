@@ -24,7 +24,7 @@
             "App\\": "app/"
         },
         "files": [
-            
+             "app/Http/upload.php"
         ]
     },
     "autoload-dev": {
