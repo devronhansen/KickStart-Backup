@@ -14,8 +14,7 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*",
-        "barryvdh/laravel-ide-helper": "^2.2"
+        "symfony/dom-crawler": "2.8.*|3.0.*"
     },
     "autoload": {
         "classmap": [
@@ -25,7 +24,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/http/upload.php"
+            
         ]
     },
     "autoload-dev": {
